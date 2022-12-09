@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Instrumental Variables &#8212; Fundamentos de Macroeconomia</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Social Media and Mental Health" href="r9.html" />
+    <link rel="prev" title="Randomized Control Trial (RCT)" href="r7.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentos de Macroeconomia</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="r1.html">
+   Modelo Ingreso-Gasto Keynesiano
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r2.html">
+   Modelo Ingreso-Gasto: la Curva IS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r3.html">
+   Mercado de dinero y curva LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r4.html">
+   Modelo IS-LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r5.html">
+   Modelo DA-OA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r6.html">
+   Closing the Gap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r7.html">
+   Randomized Control Trial (RCT)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Instrumental Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r9.html">
+   Social Media and Mental Health
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r10.html">
+   Regression Discontinuity (RDD)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/r8.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fr8.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/r8.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Instrumental Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ploteo-de-histogramas">
+     Ploteo de Histogramas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresiones">
+     Regresiones
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Instrumental Variables</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Instrumental Variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ploteo-de-histogramas">
+     Ploteo de Histogramas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresiones">
+     Regresiones
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="instrumental-variables">
+<h1>Instrumental Variables<a class="headerlink" href="#instrumental-variables" title="Permalink to this headline">#</a></h1>
+<section id="lectura">
+<h2>Lectura<a class="headerlink" href="#lectura" title="Permalink to this headline">#</a></h2>
+<p>La lectura de Dell busca analizar cuál ha sido el impacto causal a largo plazo del sistema de trabajo forzado de la mita durante el Virreinato Español en el Perú. Se busca entender cuál es el impacto en la calidad de vida contemporánea de aquellos distritos que estuvieron relacionados en el pasado con esta red de trabajo, a comparación de aquellos donde no había mita. Por lo tanto, se busca comprobar o rechazar la hipótesis de que las instituciones históricas extractivas influyen en la prosperidad económica a largo plazo. Asimismo, la autora plantea la hipótesis de que la presencia de terratenientes en las zonas donde no hubo mita facilitó un sistema de tenendica de tierra estable que promovió la provisión de bienes públicos, mientras que en las zonas de la mita, al ser abolida la tenencia comunal, esto derivó en revueltas campesinas, y una administración en menor escala de las tierras, que los alejó de los bienes y servicios públicos hasta el día de hoy.</p>
+<p>Una ventaja de esta investigación corresponde con su diseño metodológico, que hace uso de un enfoque de regresión discontinua para evaluar los efectos a largo plazo de la mita. Esto se hace ya que existiía una clara diferencia en los distritos donde había mita y donde no, ya que los primeros debían enviar a la séptima parte de su población masculina a trabajar, mientas que los demás distritos no. Y justamente esta diferenciación se divide en dos áreas territoriales, que pueden ser usadas por la regresión discontinua. Este tipo de diseño permite evidenciar los mecanismos causales por medio de un umbral, donde se toma como límite la región sometida a la mita, y se la compara con aquella que no fue sometida. Esto también permite controlar ciertos aspectos que podrían afectar a nuestras variables explicativas, como por ejemplo la altitud del territorio o la distribución étnica, que se mantienen estadísticamente idénticos dentro del límite territorial que plantea esta regresión discontinua.</p>
+<p>Por otro lado, también se pueden identificar algunas debilidades de este enfoque de investigación. En primer lugar, el trabajo analiza el impacto de la mita a largo plazo, pero no se toman en cuenta las variaciones que se han tenido desde la independencia del Perú hasta el día de hoy en las localidades donde había mita. Es probable que el impacto de la mita se vea en mayor medida reflejado en la posterior relación del Estado Peruano con estas zonas, ya que la administración de las minas y de las tierras cambió con la construcción del Estado. Asimismo, considero que hace falta evaluar la variación interna entre aquellas zonas con mita, lo que podría evidenciar variaciones endógenas que explicarían los diferentes niveles de crecimiento entre las zonas que tenían mita. El trabajo analiza los efectos de la mita en la cordillera, pero creo que sería importante considerar las variaciones entre las localidades de cada uno de los grupos analizados.</p>
+<p>En relación a la pregunta, el trabajo compara un listado de los distritos sometidos a la mita con los distritos modernos, haciendo uso de datos independientes de caidad de vida de la Encuesta Nacional de Hogares del Perú del 2001, así como del Ministerio de Educación. Para ello, se utiliza una regresión discontínua, donde se toma como grupo de control a los distritos que no tuvieron mita, y el grupo de tratamiento se compondría de aquellos distritos donde si hubo mita. El trabajo logra encontrar resultados significativos acerca de que el impacto de la mita genera que exista un retraso actual de crecimiento infantil, así como una disminución histórica del nivel educativo, y un menor nivel de integración a la red de carreteras. Asimismo, se puede observar que las haciendas se desarrollaron fuera de la zona de influencia de la mita, lo que ha generado que en las zonas de la mita haya prevalecido hasta hoy la agricultura de subsistencia y que el consumo doméstico de estos distritos que tenían mita sea 25% menor que los demás. Además, el trabajo logra contraargumentar el conocido argumento de que la desgualdad histórica en el acceso en la tierra es lo que ha causado el limitado crecimiento de América Latina. Por medio de esta investigación, se demuestra que los grandes terratenientes que no estaban en localidades relacionadas con la mita fueron atractivos para la clase trabajadores, ya que les ofrecián una coartada frenten a la explotación del Estado en la mita, lo que les garantizaba el acceso a bienes y servicios públicos.</p>
+<p>Finalmente, este trabajo corresponde a un precedente para entender como las instituciones históricas nos permiten entender las condiciones desiguales de desarrollo en la actualidad. El autor propone que se debería investigar el papel del Estado en la economía a nivel histórico como un purto de partida interesante para entender las dinámicas de desigualdad que se perpetúan hasta el día de hoy. Asimismo, existen trabajos que han realizado esta evaluación de instituciones históricas en otro países. Por ejemplo, el trabajo de Robinson (2015) analiza las facetas extractivas de las instituciones políticas de Colombia desde los años 1850, y demuestra que estas se han tornado menos extractivas con el paso del tiempo, lo que ha generado modernización en el país, pero cuya pobreza y violencia persisten por causa de otros factores. Trabajos como este podrían usarse para realizar comparaciones con el Perú, u otros países con un pasado colonial. Esto es lo que Michalopoulos y Papaioannou (2013) realizan acerca del desarrollo contemporáneo de África, y logran evidenciar que la distribución étnica centralizada de la época colonial ha tenido un efecto en el desarrollo regional.</p>
+<p>Bibliografía</p>
+<ul class="simple">
+<li><p>Dell, M. (2010). The persistent effects of Peru’s mining mita. Econometrica, 78(6), 1863-1903.</p></li>
+<li><p>Michalopoulos, S., &amp; Papaioannou, E. (2013). Pre‐colonial ethnic institutions and contemporary African development. Econometrica, 81(1), 113-152.</p></li>
+<li><p>Robinson, J. A. (2015). The misery in Colombia. Desarrollo y sociedad, (76), 9-90.</p></li>
+</ul>
+</section>
+<section id="codigo">
+<h2>Código<a class="headerlink" href="#codigo" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span> 
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span> 
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span> 
+<span class="kn">import</span> <span class="nn">plotnine</span> <span class="k">as</span> <span class="nn">p</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">import</span> <span class="nn">linearmodels.iv.model</span> <span class="k">as</span> <span class="nn">lm</span>
+<span class="kn">from</span> <span class="nn">linearmodels.iv</span> <span class="kn">import</span> <span class="n">IV2SLS</span>
+<span class="kn">from</span> <span class="nn">statsmodels.iolib.summary2</span> <span class="kn">import</span> <span class="n">summary_col</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ssl</span>
+<span class="n">ssl</span><span class="o">.</span><span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">_create_unverified_context</span>
+
+<span class="k">def</span> <span class="nf">read_data</span><span class="p">(</span><span class="n">file</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;https://raw.github.com/scunning1975/mixtape/master/&quot;</span> <span class="o">+</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="n">card</span> <span class="o">=</span> <span class="n">read_data</span><span class="p">(</span><span class="s2">&quot;card.dta&quot;</span><span class="p">)</span>
+<span class="n">card</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>nearc2</th>
+      <th>nearc4</th>
+      <th>educ</th>
+      <th>age</th>
+      <th>fatheduc</th>
+      <th>motheduc</th>
+      <th>weight</th>
+      <th>momdad14</th>
+      <th>sinmom14</th>
+      <th>...</th>
+      <th>KWW</th>
+      <th>IQ</th>
+      <th>married</th>
+      <th>libcrd14</th>
+      <th>exper</th>
+      <th>lwage</th>
+      <th>expersq</th>
+      <th>u_lwage</th>
+      <th>lwage_hat</th>
+      <th>u_educ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>29.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>158413.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>15.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>16.0</td>
+      <td>6.306275</td>
+      <td>256.0</td>
+      <td>0.198047</td>
+      <td>6.108228</td>
+      <td>-3.067539</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>27.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>380166.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>35.0</td>
+      <td>93.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>9.0</td>
+      <td>6.175867</td>
+      <td>81.0</td>
+      <td>-0.211160</td>
+      <td>6.387027</td>
+      <td>-1.727562</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>34.0</td>
+      <td>14.0</td>
+      <td>12.0</td>
+      <td>367470.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>42.0</td>
+      <td>103.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>16.0</td>
+      <td>6.580639</td>
+      <td>256.0</td>
+      <td>0.204719</td>
+      <td>6.375920</td>
+      <td>1.012975</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>11.0</td>
+      <td>27.0</td>
+      <td>11.0</td>
+      <td>12.0</td>
+      <td>380166.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>25.0</td>
+      <td>88.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>10.0</td>
+      <td>5.521461</td>
+      <td>100.0</td>
+      <td>-0.967905</td>
+      <td>6.489366</td>
+      <td>-2.253536</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>12.0</td>
+      <td>34.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>367470.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>34.0</td>
+      <td>108.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>16.0</td>
+      <td>6.591674</td>
+      <td>256.0</td>
+      <td>0.125173</td>
+      <td>6.466501</td>
+      <td>1.090437</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 37 columns</p>
+</div></div></div>
+</div>
+<section id="id1">
+<h3>Instrumental Variables<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>El supuesto de relevancia y validez son las dos condiciones mínimas que se deben satisfacer para que una variable instrumental funcione correctamente.</p>
+<p>Cuando hablamos de “relevancia” nos estamos refiriendo a que debe existir una relación mínima entre la variable de tratamiento X y la variable instrumental Z. Cuando usamos variables instrumentales, lo que buscamos es usar la parte de X que se explica por Z. Por lo tanto, la “relevancia” refiere a la condición indispensable de que Z efectivamente se relacione con X. Mientras más fuerte sea esta correlación, es decir mientras más se acerque a 1, entonces podemos tener más confianza de que esta relación permitirá que la variable instrumental funcione correctamente.</p>
+<p>En cambio, cuando nos referimos a la “validez”, nos referimos a que la variable instrumental Z debe ser una variable que no tenga puertas traseras propias. Esto quiere decir que no debe haber ningún otro camino que lleve a Z a afectar a Y, excepto el camino de X, que es nuestra variable de tratamiento. A la validez también podemos llamar la condición de “restricción de exclusión”, en el sentido de que Z puede ser retirada del modelo de Y luego de haber construído el camino de Z a X. La idea de la “validez” es que la variable Z se encargue de cerrar algunas de las puertas traseras de X, y para ello la variable Z no debe tener puertas traseras de su parte. Por lo tanto, si nuestra variable Z es válida, todo mecanismo causal debe empezar por Z, lo que cierra las puertas de las demás variables que afectan a X dentro de ese modelo. Pero siempre resulta difícil identificar la validez de una variable instrumental, a menos que este represente una aleatoreidad real, o provenga de un entorno totalmente diferente al de la variable Y, pero que igual pueda relacionarse con X.</p>
+</section>
+<section id="ploteo-de-histogramas">
+<h3>Ploteo de Histogramas<a class="headerlink" href="#ploteo-de-histogramas" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">card</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;educ&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;nearc4&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Años de Educación&quot;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ab100c2610&gt;
+</pre></div>
+</div>
+<img alt="_images/r8_9_1.png" src="_images/r8_9_1.png" />
+</div>
+</div>
+<p>Viendo ambos histogramas, se puede observar que la variable “vivir cerca a la universidad” afecta los años de educación de las personas. En general, se puede afirmar que vivir cerca a una universidad aumenta los años de educación en promedio que reciben los jóvenes de la investigación. El primer gráfico muestra el nivel de educación de jóvenes que no viven cerca a su universidad al ser la variable “nearc4” con categoría 0. Alrededor de 350 jóvenes llegaron a tener 12 años y medio de educación, y solo alrededor de 40 lograron alcanzar 17 años y medio de educación. En cambio, en el segundo gráfico, de aquellos jóvenes con universidades ubicadas cerca al lugar donde viven, se observa que los años de educación de muchos de ellos son más altos que los del primer gráfico. Aquí más de 600 jóvenes alcanzaron los 12 años y medio de educación, y alrededor de 200 llegaron a las 17 años y medio. Por lo tanto, vemos que existe un aumento de los años de educación al vivir cerca a una universidad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">card</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;lwage&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;nearc4&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Logaritmo de los ingresos&quot;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1ab192bd550&gt;
+</pre></div>
+</div>
+<img alt="_images/r8_11_1.png" src="_images/r8_11_1.png" />
+</div>
+</div>
+<p>Ambos histogramas muestran la distribución de ingresos de las personas que viven cerca a una universidad y las que no. Sin embargo, no se ven diferencias significativas en el patrón, ya que se observa una distribución normal en ambos casos. Es verdad que en el gráfico 2 hay un poco más de concentración en las personas con logaritmo de ingresos 6.5 a 6.7, pero esto se debe a la cantidad de casos del grupo. En ambos gráficos, existen pocos personas con logaritmos de ingresos menos a 5 o mayores a 7, y la mayor concentración de estos logaritmos se encuentran entre 6 y 6.5 logaritmo de ingresos. Por lo tanto, no parece observarse una relación entre vivir cerca a una universidad y tener más o menos ingresos. Lo único que cambia es la cantidad de casos por grupo, donde el grupo de personas que viven en una universidad es mayor. Sin embargo, la distribución de los ingresos no cambia de manera significativa entre ambos gráficos.</p>
+</section>
+<section id="regresiones">
+<h3>Regresiones<a class="headerlink" href="#regresiones" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ols_reg</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="o">.</span><span class="n">from_formula</span><span class="p">(</span><span class="s2">&quot;lwage ~ educ + exper + black + south + married + smsa&quot;</span><span class="p">,</span> 
+              <span class="n">data</span> <span class="o">=</span> <span class="n">card</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ols_reg</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>lwage</td>      <th>  R-squared:         </th> <td>   0.305</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.304</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   219.2</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Thu, 08 Dec 2022</td> <th>  Prob (F-statistic):</th> <td>1.97e-232</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>19:08:50</td>     <th>  Log-Likelihood:    </th> <td> -1273.9</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>  3003</td>      <th>  AIC:               </th> <td>   2562.</td> 
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>  2996</td>      <th>  BIC:               </th> <td>   2604.</td> 
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     6</td>      <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th> <td>    5.0633</td> <td>    0.064</td> <td>   79.437</td> <td> 0.000</td> <td>    4.938</td> <td>    5.188</td>
+</tr>
+<tr>
+  <th>educ</th>      <td>    0.0712</td> <td>    0.003</td> <td>   20.438</td> <td> 0.000</td> <td>    0.064</td> <td>    0.078</td>
+</tr>
+<tr>
+  <th>exper</th>     <td>    0.0342</td> <td>    0.002</td> <td>   15.422</td> <td> 0.000</td> <td>    0.030</td> <td>    0.038</td>
+</tr>
+<tr>
+  <th>black</th>     <td>   -0.1660</td> <td>    0.018</td> <td>   -9.426</td> <td> 0.000</td> <td>   -0.201</td> <td>   -0.131</td>
+</tr>
+<tr>
+  <th>south</th>     <td>   -0.1316</td> <td>    0.015</td> <td>   -8.788</td> <td> 0.000</td> <td>   -0.161</td> <td>   -0.102</td>
+</tr>
+<tr>
+  <th>married</th>   <td>   -0.0359</td> <td>    0.003</td> <td>  -10.547</td> <td> 0.000</td> <td>   -0.043</td> <td>   -0.029</td>
+</tr>
+<tr>
+  <th>smsa</th>      <td>    0.1758</td> <td>    0.015</td> <td>   11.372</td> <td> 0.000</td> <td>    0.145</td> <td>    0.206</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>53.196</td> <th>  Durbin-Watson:     </th> <td>   1.858</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>  69.430</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.231</td> <th>  Prob(JB):          </th> <td>8.38e-16</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.584</td> <th>  Cond. No.          </th> <td>    154.</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+</div>
+<p>Esta regresión nos muestra un p value menor a 0.05, por lo que podemos decir que los resultados son significativos. En este caso, todas las variables tienen un efecto sobre los ingresos. Las variables “educ”, “exper” y “smsa”, con coeficientes de 0.07, 0.03 y 0.18 tienen un efecto positivo en el ingreso. Esto quiere decir que si aumenta en una unidad la variable educación o la variable experiencia, es decir, que aumentan en un año, entonces el logaritmo de ingresos aumentará en 0.07 o 0.03 respectivamente. En el caso de vivir en SMSA, si se cumple esta condición, entonces el logaritmo del ingreso aumentará en 0.18. Sin embargo, ser afroamericano, vivir en el sur, o estar casado, son variables que afectan negativamente al ingreso. Esto quiere decir que si eres afroamericano, vives en el sur de EEUU o estas casado, el logaritmo del ingreso va a disminuir en 0.17, 0.12 o 0.04 puntos respectivamente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">card</span><span class="p">[</span><span class="s1">&#39;married&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">card</span><span class="p">[</span><span class="s1">&#39;married&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">iv_reg</span> <span class="o">=</span> <span class="n">IV2SLS</span><span class="o">.</span><span class="n">from_formula</span><span class="p">(</span><span class="s2">&quot;lwage ~  1 + exper + black + south + married + smsa + [educ ~ nearc2 ]&quot;</span><span class="p">,</span> <span class="n">card</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">iv_reg</span><span class="o">.</span><span class="n">summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>IV-2SLS Estimation Summary</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>lwage</td>      <th>  R-squared:         </th> <td>-1.3114</td>
+</tr>
+<tr>
+  <th>Estimator:</th>             <td>IV-2SLS</td>     <th>  Adj. R-squared:    </th> <td>-1.3160</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>       <td>3010</td>       <th>  F-statistic:       </th> <td>289.62</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Thu, Dec 08 2022</td> <th>  P-value (F-stat)   </th> <td>0.0000</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>19:08:50</td>     <th>  Distribution:      </th> <td>chi2(6)</td>
+</tr>
+<tr>
+  <th>Cov. Estimator:</th>        <td>robust</td>      <th>                     </th>    <td></td>    
+</tr>
+<tr>
+  <th></th>                          <td></td>         <th>                     </th>    <td></td>    
+</tr>
+</table>
+<table class="simpletable">
+<caption>Parameter Estimates</caption>
+<tr>
+      <td></td>      <th>Parameter</th> <th>Std. Err.</th> <th>T-stat</th>  <th>P-value</th> <th>Lower CI</th> <th>Upper CI</th>
+</tr>
+<tr>
+  <th>Intercept</th>  <td>0.1276</td>    <td>3.1412</td>   <td>0.0406</td>  <td>0.9676</td>   <td>-6.0290</td>  <td>6.2843</td> 
+</tr>
+<tr>
+  <th>black</th>      <td>0.1134</td>    <td>0.1816</td>   <td>0.6244</td>  <td>0.5324</td>   <td>-0.2425</td>  <td>0.4692</td> 
+</tr>
+<tr>
+  <th>exper</th>      <td>0.1515</td>    <td>0.0747</td>   <td>2.0274</td>  <td>0.0426</td>   <td>0.0050</td>   <td>0.2980</td> 
+</tr>
+<tr>
+  <th>married</th>    <td>-0.0151</td>   <td>0.0147</td>   <td>-1.0258</td> <td>0.3050</td>   <td>-0.0438</td>  <td>0.0137</td> 
+</tr>
+<tr>
+  <th>smsa</th>       <td>0.0201</td>    <td>0.1030</td>   <td>0.1949</td>  <td>0.8455</td>   <td>-0.1819</td>  <td>0.2220</td> 
+</tr>
+<tr>
+  <th>south</th>      <td>-0.0319</td>   <td>0.0692</td>   <td>-0.4603</td> <td>0.6453</td>   <td>-0.1675</td>  <td>0.1038</td> 
+</tr>
+<tr>
+  <th>educ</th>       <td>0.3618</td>    <td>0.1849</td>   <td>1.9562</td>  <td>0.0504</td>   <td>-0.0007</td>  <td>0.7243</td> 
+</tr>
+</table><br/><br/>Endogenous: educ<br/>Instruments: nearc2<br/>Robust Covariance (Heteroskedastic)<br/>Debiased: False</div></div>
+</div>
+<p>A comparación de la regresión sin variables instrumentales, esta regresión ha generado que cambie el coeficiente de la variable “educ” cuando tomamos a la variable “nearc2”, que significa vivir cerca a una universidad. Su p value es un poco mayor a 0.05, por lo que podríamos argumentar que no es un valor significativo. Sin embargo, igual podemos analizar estos resultados. En la primer regresión, el coeficiente de “educ” fue de 0.0712. Ahora, con la variable instrumental, el coeficiente de educ fue de 0.36, es decir, 5 veces mayor que cuando no instrumentalizamos a la variable. Esto quiere decir que cuando instrumentalizamos a la variable “educación”, en este caso con la variable de “vivir cerca a una universidad”, su capacidad de afectar a la variable “ingreso” aumenta considerablemente. Este cambio se debe claramente al efecto de la variable instrumental de cerrar las puertas traseras que afectaban a la variable de tratamiento “educación”. Asimismo, podemos estar seguros de la fuerza de esta variable instrumental “nearc2” por el F statistic, que es mucho mayor que 15. En resumen, ahora podemos decir que cuando asociamos la educación con la cercanía de una universidad, por cada año extra de educación, el logaritmo de ingresos aumentará en 0.36, o 36%.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="r7.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Randomized Control Trial (RCT)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="r9.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Social Media and Mental Health</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alexander Du-Bois Arana<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

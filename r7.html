@@ -1,0 +1,1376 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Randomized Control Trial (RCT) &#8212; Fundamentos de Macroeconomia</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Instrumental Variables" href="r8.html" />
+    <link rel="prev" title="Closing the Gap" href="r6.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentos de Macroeconomia</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="r1.html">
+   Modelo Ingreso-Gasto Keynesiano
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r2.html">
+   Modelo Ingreso-Gasto: la Curva IS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r3.html">
+   Mercado de dinero y curva LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r4.html">
+   Modelo IS-LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r5.html">
+   Modelo DA-OA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r6.html">
+   Closing the Gap
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Randomized Control Trial (RCT)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r8.html">
+   Instrumental Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r9.html">
+   Social Media and Mental Health
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r10.html">
+   Regression Discontinuity (RDD)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/r7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fr7.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/r7.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ploteo-de-histogramas">
+     Ploteo de Histogramas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#difference-in-means-estimator">
+     Difference-in-means estimator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#difference-in-means-estimator-via-linear-regression">
+     Difference-in-means estimator via linear regression
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Randomized Control Trial (RCT)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ploteo-de-histogramas">
+     Ploteo de Histogramas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#difference-in-means-estimator">
+     Difference-in-means estimator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#difference-in-means-estimator-via-linear-regression">
+     Difference-in-means estimator via linear regression
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="randomized-control-trial-rct">
+<h1>Randomized Control Trial (RCT)<a class="headerlink" href="#randomized-control-trial-rct" title="Permalink to this headline">#</a></h1>
+<section id="lectura">
+<h2>Lectura<a class="headerlink" href="#lectura" title="Permalink to this headline">#</a></h2>
+<p>La lectura de Chetty et al. busca entender qué efectos a largo plazo tiene en los niños vivir en un mejor vecindario. Para ello plantean su pregunta de investigación de la siguiente manera: ¿cómo es que el vecindario donde crece un niño afecta su performance en el futuro, como atender la universidad, sus ingresos, su vida sexual, etc? Para ello van a comparar a niños que se han movido de vecindario con los que no en diferentes edades, utilizando la data de un experimento social realizado por el ministerio de Desarrollo Urbano de EEUU llamado Moving to Opportunity (MTO), luego de que estos niños hayan cumplido 18 años.</p>
+<p>Una fortaleza de esta investigación es la gran cantidad de variables que se usaron para medir la performance a largo plazo. Entre estas encontramos el ingreso individual de niños, el ingreso de su hogar, la cantidad de jóvenes que atienden o atendieron a la universidad, así como la calidad de estas universidades, las características del vecindario donde viven como adultos, su estado civil y fertilidad, así como su pago de impuestos. Esto genera que las mediciones para entender si el cambio de vecindario de los niños afectó su futuro tengan diferentes aristas de las cuales analizarse, y no se queden en una revisión básica de los ingresos, que podrían verse afectados por otras variables. La performance en el futuro tiene muchas ramas, y creo que los autores hacen un buen trabajo en reconocerlas. Asimismo, otro punto a favor de la investigación es el uso de una variable instrumental para asegurarse que el efecto del cambio de vecindario si es una efecto causal sobre el futuro de los jóvenes. Esto se debe a que la asignación de los vouchers de dinero para la mudanza otorgados en el experimento de MTO fue aleatoria. Por lo tanto, esta asignación es reconocida y usada por los investigadores para controlar el efecto de la mudanza en las demás variables, asegurando poder sacar concluciones de mecanismos causales válidas.</p>
+<p>Sin embargo, el trabajo también presenta algunas debilidades. A pesar de que estas relaciones causales se controlen por la variable instrumental de los vouchers, existe otra variable que no se puede controlar: la edad con la que los niños se mudaron. Los autores idenitifican que al no saberse esta edad, no se puede aplicar la causalidad para todos los datos del MTO, ya que la edad con la que los niños se mudan podría estar correlacionada a otros factores no tomados en cuenta. Es por esto también que en los resultados finales solo fueron significativos para los niños menores a 13 años al momento de mudarse, mientras que no fueron significativos para aquellos que se mudaron teniendo entre 13 y 18 años. Es por eso que la investigación queda limitada a solo poder afirmar mecanismos causales sobre el vecindario para el grupo de niños menores a 13, ya que no se puede controlar la variable edad tal y como se hizo con los vouchers.</p>
+<p>Acerca del conocimiento sobre la pregunta, los autores utilizan la data del experimento de MTO para probar dos hipótesis: que moverse a un mejor vecindario (menos pobre) genera que los niños que fueron jóvenes en la mudanza tengan mejores ingresos en el futuro; y que las ganancias de moverse a una nueva área declinan si el niño tiene más edad al momento de la mudanza. Para esto, se utilizó la aleatoriedad del MTO, donde se asignó a las familias participantes en 3 grupos: el control, que no recibió ayuda; el experimental, donde se les dio vouchers con dinero para mudarse a un área específica; y la sección 8, que también recibió el dinero, pero no indicaciones de a qué área mudarse. Luego de esto, se analizó la situación de aquellos niños que tenían más de 18 años al momento de la investigación. La investigación encuentra que sí existe un efecto significativo asociado con vivir en un buen vecindario y tener un buen rendimiento en el futuro. Sin embargo, este efecto es mucho más profundo cuando la mudanza a un buen vecindario se hace cuando los niños son pequeños, lo que va acorde con otras investigaciones que fundamentan que estos cambios son más efectivos en una edad temprana de desarrollo. Asimismo, programas como MTO son definitivamente positivos para generar mejores ingresos económicos en las familias, mejor planeamiento, así como mayores pagadores de impuestos. Pero lo importante es reconocer que los resultados se maximizaron si este tipo de reolcación se realiza con niños pequeños, incluso lo más cercano a su nacimiento.</p>
+<p>Uno de los próximos avances que se podría realizar para este tipo de investigaciones podría ser analizar no solo el vecindario a donde se mudan los niños, sino el colegio al que atiendan. Podríamos observar si el colegio al que se cambian los niños afecta su rendimiento a futuro, probablemente utilizando la misma data de MTO. Asimismo, la pandemia y el cambio a la virtualidad podrían ser un estudio interesante para evaluar cómo esta cambio pudo haber afectado el rendimiento de los alumos, y cómo estos dos años podrían tener consecuencias en el futuro. Por otro lado, el tema de la migración también podría ser trabajado para entender los efectos de los movimientos en el redimiento a futuro de las personas desplazadas, tendiendo en cuenta el vecindario donde se asientan. Por ejemplo, el trabajo de Becker y Ferrara (2019), podría ser un buen inicio para entender cómo la migración forzada genera diferentes resultados en educación, ingresos o afinidades políticas que la migración voluntaria. Asimismo, existen estudios que estudian los patrones de movilización según la segregación de ingreso esperado, como el trabajo de Moro et al. (2021), que analiza como las interacciones sociales y el movimiento de personas cambia las distribuciones de segregación de ingresos en las ciudades, y no solo el lugar de residencia. Este tipo de trabajos nos permitirían tener un mejor entendimiento de cómo el lugar donde se vive cambia nuestra performance, pero también nuestras expectativos y nuestras interacciones sociales.</p>
+<p>Bibliografía:</p>
+<ul class="simple">
+<li><p>Becker, S. O., &amp; Ferrara, A. (2019). Consequences of forced migration: A survey of recent findings. Labour Economics, 59, 1-16.</p></li>
+<li><p>Chetty, R., Hendren, N., &amp; Katz, L. F. (2016). The effects of exposure to better neighborhoods on children: New evidence from the moving to opportunity experiment. American Economic Review, 106(4), 855-902.</p></li>
+<li><p>Moro, E., Calacci, D., Dong, X., &amp; Pentland, A. (2021). Mobility patterns are associated with experienced income segregation in large US cities. Nature communications, 12(1), 1-10.</p></li>
+</ul>
+</section>
+<section id="codigo">
+<h2>Código<a class="headerlink" href="#codigo" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span> 
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span> 
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span> 
+<span class="kn">import</span> <span class="nn">plotnine</span> <span class="k">as</span> <span class="nn">p</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">import</span> <span class="nn">linearmodels.iv.model</span> <span class="k">as</span> <span class="nn">lm</span>
+<span class="kn">from</span> <span class="nn">linearmodels.iv</span> <span class="kn">import</span> <span class="n">IV2SLS</span>
+<span class="kn">from</span> <span class="nn">statsmodels.iolib.summary2</span> <span class="kn">import</span> <span class="n">summary_col</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://github.com/matheusfacure/python-causality-handbook/raw/master/causal-inference-for-the-brave-and-true/data/online_classroom.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(323, 10)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>asian</th>
+      <th>black</th>
+      <th>hawaiian</th>
+      <th>hispanic</th>
+      <th>unknown</th>
+      <th>white</th>
+      <th>format_ol</th>
+      <th>format_blended</th>
+      <th>falsexam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>63.29997</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>79.96000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>83.37000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>90.01994</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>83.30000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># creado una columna extra para clasificar</span>
+<span class="n">data_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span>
+ <span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Formato_de_clase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+     <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;format_ol&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">),</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;format_blended&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)],</span>
+     <span class="p">[</span><span class="s2">&quot;online lessons&quot;</span><span class="p">,</span> <span class="s2">&quot;blended format&quot;</span><span class="p">],</span>
+     <span class="n">default</span><span class="o">=</span><span class="s2">&quot;face to face&quot;</span> <span class="c1">#create a new variable</span>
+ <span class="p">)))</span> <span class="c1">#group by the new variable (treatments)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>asian</th>
+      <th>black</th>
+      <th>hawaiian</th>
+      <th>hispanic</th>
+      <th>unknown</th>
+      <th>white</th>
+      <th>format_ol</th>
+      <th>format_blended</th>
+      <th>falsexam</th>
+      <th>Formato_de_clase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>63.29997</td>
+      <td>face to face</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>79.96000</td>
+      <td>face to face</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>83.37000</td>
+      <td>blended format</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>90.01994</td>
+      <td>blended format</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>83.30000</td>
+      <td>online lessons</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>318</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>68.36000</td>
+      <td>blended format</td>
+    </tr>
+    <tr>
+      <th>319</th>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>70.05000</td>
+      <td>online lessons</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>66.69000</td>
+      <td>online lessons</td>
+    </tr>
+    <tr>
+      <th>321</th>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>83.29997</td>
+      <td>online lessons</td>
+    </tr>
+    <tr>
+      <th>322</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>96.68000</td>
+      <td>blended format</td>
+    </tr>
+  </tbody>
+</table>
+<p>323 rows × 11 columns</p>
+</div></div></div>
+</div>
+<section id="ploteo-de-histogramas">
+<h3>Ploteo de Histogramas<a class="headerlink" href="#ploteo-de-histogramas" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;falsexam&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Notas&quot;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x211d1eee370&gt;
+</pre></div>
+</div>
+<img alt="_images/r7_9_1.png" src="_images/r7_9_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;falsexam&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">)</span>
+<span class="n">h</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Notas&quot;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x211db32ecd0&gt;
+</pre></div>
+</div>
+<img alt="_images/r7_10_1.png" src="_images/r7_10_1.png" />
+</div>
+</div>
+<p>Si analizamos las diferencias en la distribución de notas entre los 3 histogramas, podemos ver que el grupo “face to face” es que el que tiene una distribución con notas más altas que los demás grupos. Le sigue el grupo “blended format”, con notas un poco más bajas, y finalmente, la distribución con notas más bajas sería la de “online lessons”. Si embargo, también se puede observar que la diferencia entre las notas no es tan grande, ya que la mayoría de las notas se mantienen en el rango de 60 a 90 de puntaje de notas, donde el grupo “face to face” acumula más notas con puntajes más altos. El único caso atípico serían las notas de 0 en la categoría de “online lessons”. Gracias a estos datos, podemos decir que tener aquellos alumnos que tuvieron clases presenciales tuvieron mejores notas que los que tuvieron clases híbridas o virtuales.</p>
+</section>
+<section id="difference-in-means-estimator">
+<h3>Difference-in-means estimator<a class="headerlink" href="#difference-in-means-estimator" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span> <span class="o">=</span> <span class="n">data_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span><span class="p">[</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_3</span><span class="p">[</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     gender  asian  black  hawaiian  hispanic  unknown  white  format_ol  \
+0         0    0.0    0.0       0.0       0.0      0.0    1.0          0   
+1         1    0.0    0.0       0.0       0.0      0.0    1.0          0   
+2         1    0.0    0.0       0.0       0.0      0.0    1.0          0   
+3         1    0.0    0.0       0.0       0.0      0.0    1.0          0   
+4         1    0.0    0.0       0.0       0.0      0.0    1.0          1   
+..      ...    ...    ...       ...       ...      ...    ...        ...   
+318       0    0.0    0.0       0.0       0.0      0.0    1.0          0   
+319       1    NaN    NaN       NaN       NaN      NaN    NaN          1   
+320       0    NaN    NaN       NaN       NaN      NaN    NaN          1   
+321       1    NaN    NaN       NaN       NaN      NaN    NaN          1   
+322       1    0.0    0.0       0.0       0.0      0.0    1.0          0   
+
+     format_blended  falsexam Formato_de_clase  
+0               0.0  63.29997     face to face  
+1               0.0  79.96000     face to face  
+2               1.0  83.37000   blended format  
+3               1.0  90.01994   blended format  
+4               0.0  83.30000   online lessons  
+..              ...       ...              ...  
+318             1.0  68.36000   blended format  
+319             0.0  70.05000   online lessons  
+320             0.0  66.69000   online lessons  
+321             0.0  83.29997   online lessons  
+322             1.0  96.68000   blended format  
+
+[323 rows x 11 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span><span class="p">[</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_3</span><span class="p">[</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">remove_categories</span><span class="p">(</span><span class="s2">&quot;blended format&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>asian</th>
+      <th>black</th>
+      <th>hawaiian</th>
+      <th>hispanic</th>
+      <th>unknown</th>
+      <th>white</th>
+      <th>format_ol</th>
+      <th>format_blended</th>
+      <th>falsexam</th>
+      <th>Formato_de_clase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>63.29997</td>
+      <td>face to face</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>79.96000</td>
+      <td>face to face</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>83.37000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>90.01994</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>83.30000</td>
+      <td>online lessons</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Formato_de_clase&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>asian</th>
+      <th>black</th>
+      <th>hawaiian</th>
+      <th>hispanic</th>
+      <th>unknown</th>
+      <th>white</th>
+      <th>format_ol</th>
+      <th>format_blended</th>
+      <th>falsexam</th>
+    </tr>
+    <tr>
+      <th>Formato_de_clase</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>face to face</th>
+      <td>0.633333</td>
+      <td>0.202020</td>
+      <td>0.070707</td>
+      <td>0.000000</td>
+      <td>0.010101</td>
+      <td>0.0</td>
+      <td>0.717172</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>78.547485</td>
+    </tr>
+    <tr>
+      <th>online lessons</th>
+      <td>0.542553</td>
+      <td>0.228571</td>
+      <td>0.028571</td>
+      <td>0.014286</td>
+      <td>0.028571</td>
+      <td>0.0</td>
+      <td>0.700000</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>73.635263</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">73.635263</span> <span class="o">-</span> <span class="mf">78.547485</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4.912222
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo que acabamos de hacer nos ha dado el ATT, es decir, el Average Treatment Effect, que en este caso es de -4.91. Esto significa que los alumnos que toman clases online tienen notas aproximadamente 5 puntos peores que aquellos que llevan clases presenciales.</p>
+</section>
+<section id="difference-in-means-estimator-via-linear-regression">
+<h3>Difference-in-means estimator via linear regression<a class="headerlink" href="#difference-in-means-estimator-via-linear-regression" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span><span class="p">[</span><span class="s1">&#39;dummy_clase&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_3</span><span class="o">.</span><span class="n">Formato_de_clase</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;online lessons&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;face to face&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>asian</th>
+      <th>black</th>
+      <th>hawaiian</th>
+      <th>hispanic</th>
+      <th>unknown</th>
+      <th>white</th>
+      <th>format_ol</th>
+      <th>format_blended</th>
+      <th>falsexam</th>
+      <th>Formato_de_clase</th>
+      <th>dummy_clase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>63.29997</td>
+      <td>face to face</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>79.96000</td>
+      <td>face to face</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>83.37000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>90.01994</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>83.30000</td>
+      <td>online lessons</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ols_reg</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="o">.</span><span class="n">from_formula</span><span class="p">(</span><span class="s2">&quot;falsexam ~ dummy_clase&quot;</span><span class="p">,</span> 
+              <span class="n">data</span> <span class="o">=</span> <span class="n">data_3</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ols_reg</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>falsexam</td>     <th>  R-squared:         </th> <td>   0.039</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.034</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   8.554</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Thu, 08 Dec 2022</td> <th>  Prob (F-statistic):</th>  <td>0.00382</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>19:08:44</td>     <th>  Log-Likelihood:    </th> <td> -837.85</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   214</td>      <th>  AIC:               </th> <td>   1680.</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   212</td>      <th>  BIC:               </th> <td>   1686.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+          <td></td>            <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>        <td>   78.5475</td> <td>    1.113</td> <td>   70.563</td> <td> 0.000</td> <td>   76.353</td> <td>   80.742</td>
+</tr>
+<tr>
+  <th>dummy_clase[T.1]</th> <td>   -4.9122</td> <td>    1.680</td> <td>   -2.925</td> <td> 0.004</td> <td>   -8.223</td> <td>   -1.601</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>129.000</td> <th>  Durbin-Watson:     </th> <td>   2.091</td> 
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>1179.385</td> 
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-2.179</td>  <th>  Prob(JB):          </th> <td>7.94e-257</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td>13.643</td>  <th>  Cond. No.          </th> <td>    2.50</td> 
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+</div>
+<p>Como vemos, el valor de B1 de la regresión lineal es -4.9122, igual al valor encontrado en el apartado anterior. Con este resultado, podemos interpretar que según el coeficiente de T, ser un alumno con clases virtuales genera que nuestra nota disminuya en 4.9122 puntos.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="r6.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Closing the Gap</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="r8.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Instrumental Variables</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alexander Du-Bois Arana<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

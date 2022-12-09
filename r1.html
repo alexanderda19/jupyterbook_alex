@@ -1,0 +1,1440 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modelo Ingreso-Gasto Keynesiano &#8212; Fundamentos de Macroeconomia</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modelo Ingreso-Gasto: la Curva IS" href="r2.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentos de Macroeconomia</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Modelo Ingreso-Gasto Keynesiano
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r2.html">
+   Modelo Ingreso-Gasto: la Curva IS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r3.html">
+   Mercado de dinero y curva LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r4.html">
+   Modelo IS-LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r5.html">
+   Modelo DA-OA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r6.html">
+   Closing the Gap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r7.html">
+   Randomized Control Trial (RCT)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r8.html">
+   Instrumental Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r9.html">
+   Social Media and Mental Health
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r10.html">
+   Regression Discontinuity (RDD)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/r1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fr1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/r1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo-en-pyhton">
+   Código en Pyhton
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-1">
+     Pregunta 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-2">
+     Pregunta 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-3">
+     Pregunta 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-4">
+     Pregunta 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-5">
+     Pregunta 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#politica-fiscal-expansiva-con-aumento-del-gasto-de-gobierno">
+       Política Fiscal Expansiva con aumento del Gasto de Gobierno:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#politica-fiscal-expansiva-con-una-reduccion-de-la-tasa-de-tributacion">
+       Política Fiscal expansiva con una reducción de la Tasa de Tributación:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-6">
+     Pregunta 6
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#equilibrio-con-regla-contraciclica">
+       Equilibrio con regla contracíclica
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Política Fiscal Expansiva con aumento del Gasto de Gobierno:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crisis-mundial-que-reduce-exportaciones">
+       Crisis mundial que reduce exportaciones:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Modelo Ingreso-Gasto Keynesiano</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo-en-pyhton">
+   Código en Pyhton
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-1">
+     Pregunta 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-2">
+     Pregunta 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-3">
+     Pregunta 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-4">
+     Pregunta 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-5">
+     Pregunta 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#politica-fiscal-expansiva-con-aumento-del-gasto-de-gobierno">
+       Política Fiscal Expansiva con aumento del Gasto de Gobierno:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#politica-fiscal-expansiva-con-una-reduccion-de-la-tasa-de-tributacion">
+       Política Fiscal expansiva con una reducción de la Tasa de Tributación:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pregunta-6">
+     Pregunta 6
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#equilibrio-con-regla-contraciclica">
+       Equilibrio con regla contracíclica
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Política Fiscal Expansiva con aumento del Gasto de Gobierno:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crisis-mundial-que-reduce-exportaciones">
+       Crisis mundial que reduce exportaciones:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="modelo-ingreso-gasto-keynesiano">
+<h1>Modelo Ingreso-Gasto Keynesiano<a class="headerlink" href="#modelo-ingreso-gasto-keynesiano" title="Permalink to this headline">#</a></h1>
+<section id="lectura">
+<h2>Lectura<a class="headerlink" href="#lectura" title="Permalink to this headline">#</a></h2>
+<p>El texto de Dancourt busca responder a la pregunta de cómo se respondió al choque externo sufrido en la economía peruana en el período 2014-2015, y por qué las políticas monetarias y fiscales aplicadas no revirtieron los efectos de este frenazo, lo que generará que la recesión e inflación continúen. El texto analiza entonces las causas de esta época recesiva, conocida como época de “vacas flacas”, como lo son la caída del valor de las exportaciones, en especial las materias primas como los metales, y una sequía crediticia en dólares, para luego analizar la respuesta frente a esta problemática, e introducir algunas recomendaciones para que el gobierno siguiente pueda resolver esta crisis.</p>
+<p>Una de las principales fortalezas de este texto para responder a la pregunta es su accesibilidad. El artículo explica detalladamente el impacto de los fenómenos externos sobre la economía nacional, y explica también términos y conceptos económicos de manera simple, permitiendo a un lector inexperto comprender los procesos económicos. Por ejemplo, se explica la cadena de eventos que genera una reducción de ingresos fiscales, y el impacto que esto tiene en la realidad, y no solo en un gráfico o estadística. Asimismo, otra fortaleza del texto es el uso de una progresión histórica y del análisis de diferentes períodos para compararlos con los años de estudio del artículo. El autor utiliza diferentes períodos para comparar épocas de vacas gordas y vacas flacas, como por ejemplo las dos últimas recesiones, de 1998-2000 y 2008-2009, o para mostrar los cambios es los valores de las exportaciones a lo largo de los años, desde el 2008 hasta el 2015, o las fluctuaciones del tipo de cambio, que corresponden con las épocas de recesión analizadas. Este recorrido histórico viene acompañado de gráficos que permiten visualizar la variación de estos factores, y el autor incluso toma como ejemplo a otros países de Latinomérica, como por ejemplo Chile, Colombia y México, con quienes compara el rango meta de inflación del Perú a lo largo de los años. Además, otra fortaleza es que busca encontrar soluciones para la crisis, y no solo la expone. La última sección del texto, donde plantea los nuevos desafíos del gobierno de Kuczynski es muy importante, ya que plantea recomendaciones y guías para el futuro, en base a las críticas ya realizadas a las respuestas fallidas de gobiernos anteriores.</p>
+<p>Sin embargo, el texto no está exento de debilidades. Resalta, por ejemplo, la falta de explicaciones o detalles acerca de las causas de los choques internacionales. Al leer el texto, es muy fácil preguntarse “¿por qué bajan los precios internacionales de las materias primas?”, ya que gracias al artículo entendemos el efecto de esta reducción en la economía peruana, pero no el origen de esta reducción a nivel internacional. Entender cómo se causan estas crisis es importante para preveer mejores soluciones, y para comprender a fondo que los factores internacionales pueden tener grandes impactos sobre la economía local.</p>
+<p>La principal contribución del texto es que logra exponer de manera efectiva las razones por las que las políticas monetarias y fiscales no han logrado revertir los efectos del choque externo de los años 2014-2015. El texto no solo explica el impacto presente y futuro del choque externo, sino que analiza la respuesta del Estado y el gobierno frente a esta crisis, y examina de qué manera las políticas tomadas impactaron en la situación actual. Lamentablemente el resultado no es favorable, ya que se concluye que estas medidas, como la venta de la mitad de las reservas de divisas, o una mala planeación de la rebaja de la tasa de interés de referencia, generaron que los efectos del choque persistan. Identificar estos fallos es muy importante, sobre todo para entender por qué no funcionaron, y para evitar cometer los mismos errores en el futuro. Y justamente respecto al futuro, otra importante contribución del texto es la parte final, donde expone los desafíos de esta crisis para el nuevo gobierno de Kuczynski. Esto significa que el artículo no solo expone los problemas de la crisia actual, sino que propone soluciones a modo de guía para el próximo gobierno, justificando estas ideas en la investigación anterior. El texto logra así encontrar los problemas con la respuesta de anteriores gobiernos, y proponer nuevas alternativas viables, basándose en las propuestas del nuevo gobierno, pero sobre todo en los antecedentes históricos y los errores cometidos por gobiernos anteriores, presentados a lo largo del artículo.</p>
+<p>No obstante, las investigaciones acerca de los choques internacionales, y sobre las épocas de recesiones e inflación en el Perú deben de continuar explorando estos casos y nuevas alternativas. Uno de los campos que creo sería de gran ayuda para explorar estos temas es la arena internacional, sobre todo el papel del Perú en la economía mundial. Por ejemplo, Lust (2018) ha explorado la dependencia de la economía peruana de la exportación de recursos minerales, que justamente fue una de las razones por las que el choque que analiza Dancourt fue tan perjudicial. Lust argumenta que para cambiar esta dependencia, el papel del Perú en el mundo capitalista globalizado debe cambiar, mediante la producción de valor agregado, para convertirnos poco a poco en una economía avanzada. Sin embargo, mientras seamos una economía dominada por microempresas, esto será bastante difícil. Una alternativa para esto, que ya ha sido propuesta por algunos internacionalistas, es la integración y cooperación internacional. Mediante organizaciones como la Alianza del Pacífico, los intereses de diversas economías latinoamericanas podrían ser expuestas al mundo de manera más directa, lo que podría ayudar al Perú a cambiar su posición en el mercado global. Nuevas investigaciones podrían analizar el papel de la Alianza del Pacífico en la economía mundial y regional, y también el papel de esta organización para sobrellevar épocas de recesión como la expuesta en el texto de Dancourt.</p>
+<p>Bibliografía:</p>
+<ul class="simple">
+<li><p>Dancourt, O. (2017). The lean times in the Peruvian economy. Journal of Post Keynesian Economics, 40(1), 112-129.</p></li>
+<li><p>Lust, J. (2018). Surgimiento de una economía capitalista de subsistencia en el Perú. PLURIVERSIDAD, (1), 95-109.</p></li>
+</ul>
+</section>
+<section id="codigo-en-pyhton">
+<h2>Código en Pyhton<a class="headerlink" href="#codigo-en-pyhton" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="pregunta-1">
+<h3>Pregunta 1<a class="headerlink" href="#pregunta-1" title="Permalink to this headline">#</a></h3>
+<p>Para encontrar la función de consumo primero tenemos que entender lo que es el ingreso. El ingreso es la suma de los salarios de los trabajadores y el stock de capital, es decir, todo el ingreso del país, que se denomina Ingreso Agregado (Y). Una parte de este ingreso se entrega al Estado como tributos (T), en base a la tasa de impuestos (t). Por lo tanto, tenemos la siguiente función de Tributación total:</p>
+<div class="math notranslate nohighlight">
+\[ T = tY \]</div>
+<p>A partir de esto, podemos encontrar el Ingreso Disponible (Yd), que corresponde al ingreso que realmente queda en el bolsillo de la gente luego de la tributación:</p>
+<div class="math notranslate nohighlight">
+\[ Y^d = Y-T \]</div>
+<p>Esta ecuación también se puede mostrar de la siguiente manera:</p>
+<div class="math notranslate nohighlight">
+\[ Y^d = Y(1 - t) \]</div>
+<p>Entendiendo lo que representa el Ingreso Disponible, ahora podemos generar la función de consumo, que suma el consumo autónomo (Co), es decir, el gasto necesario de las familias para su supervivencia, con la variación en los gastos del ingreso disponible de las familias, que se conoce como la propensión marginal a consumir (b), que tiene un valor del 0 al 1, multiplicado por el ingreso disponible.</p>
+<div class="math notranslate nohighlight">
+\[ C = C_0 + bY^d \]</div>
+<p>El consumo autónomo es una constante, pero luego encontramos la relación entre la propensión marginal a consumir y el Ingreso Disponible. Si cambia “b”, entonces el consumo del ingreso disponible cambiará, ya que multiplica a este valor. Si la propensión es más cercana a 1, entonces las personas gastarán más de su ingreso disponible para su consumo. Por lo tanto, la función de consumo depende del consumo autónomo y de la relación entre el Ingreso disponible y la PMgC.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parámetros</span>
+
+<span class="n">Yd_size</span> <span class="o">=</span> <span class="mi">70</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1"># b &gt; m</span>
+
+<span class="n">Yd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Yd_size</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">C_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">Yd</span><span class="p">):</span>
+    <span class="n">C_K</span> <span class="o">=</span> <span class="n">Co</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">Yd</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">C_K</span>
+
+<span class="n">C_IS_K</span> <span class="o">=</span> <span class="n">C_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">Yd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico</span>
+
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">C_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Yd</span><span class="p">,</span> <span class="n">C_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;C=Co+bYd&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;$PMgC = {∆C}/{∆Y^d} = b = 0.5$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Función de demanda de Consumo&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Yd&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span> 
+
+<span class="n">custom_xlim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+<span class="n">custom_ylim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="n">custom_xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="n">custom_ylim</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_7_0.png" src="_images/r1_7_0.png" />
+</div>
+</div>
+</section>
+<section id="pregunta-2">
+<h3>Pregunta 2<a class="headerlink" href="#pregunta-2" title="Permalink to this headline">#</a></h3>
+<p>La función de Inversión tiene 3 componentes, que representan los gastos que aumentan el stock de capital de la economía, y por lo tanto la producción:</p>
+<p>Inversión autónoma (Io): represente el costo de reemplazar y mantener funcionando lo que se va desgastando o malogrando. Es la variación de las inversiones fijas, constantes.</p>
+<p>h: es la sensibilidad de los inversionistas ante la tasa de interés. Va de 0 a 1.</p>
+<p>r: es la tasa de interés real o activa. Va del 0 al 1.</p>
+<p>Por lo tanto, la fórumla de la Inversión sería la inversión autónoma menos la multiplicación de la sensibilidad para invertir con la tasa de interés real:</p>
+<div class="math notranslate nohighlight">
+\[ I = I_0 - hr \]</div>
+<p>Esto implica que si sube la tasa de interés, los inversionistas van a preferir invertir menos. Por lo tanto, la inversión en un país y la tasa de interés tienen relación inversa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parámetros</span>
+
+<span class="n">r_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">r_size</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">I_K</span><span class="p">(</span><span class="n">Io</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">I_K</span> <span class="o">=</span> <span class="n">Io</span> <span class="o">-</span> <span class="p">(</span><span class="n">h</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">I_K</span>
+
+<span class="n">I_IS_K</span> <span class="o">=</span> <span class="n">I_K</span><span class="p">(</span><span class="n">Io</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico</span>
+
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">I_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">I_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;I=Io-hr&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">97</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;$I=I_0-hr$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Función de demanda de Inversión&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;I&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span> 
+
+<span class="n">custom_xlim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">custom_ylim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="n">custom_xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="n">custom_ylim</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_11_0.png" src="_images/r1_11_0.png" />
+</div>
+</div>
+</section>
+<section id="pregunta-3">
+<h3>Pregunta 3<a class="headerlink" href="#pregunta-3" title="Permalink to this headline">#</a></h3>
+<p>Los cuatro supuestos del modelo Ingreso-Gasto Keynesiano son los siguientes:</p>
+<ol class="simple">
+<li><p>El nivel de precios está fijo.</p></li>
+<li><p>El nivel del producto se adapta a los cambios de la demanda agregada.</p></li>
+<li><p>La tasa de interés está determinada fuera del modelo (por el mercado monetario)</p></li>
+<li><p>Es un modelo de corto plazo.</p></li>
+</ol>
+</section>
+<section id="pregunta-4">
+<h3>Pregunta 4<a class="headerlink" href="#pregunta-4" title="Permalink to this headline">#</a></h3>
+<p>Vamos a encontrar el Ye en base a las ecuaciones del modelo Ingreso-Gasto</p>
+<p>Para llegar al equilibrio, debemos igualar DA = Y, es decir, la demanda agregada debe ser igual el ingreso agregado.</p>
+<p>Primero tenemos las ecuaciones del gasto:</p>
+<div class="math notranslate nohighlight">
+\[ C = C_0 + bY^d \]</div>
+<div class="math notranslate nohighlight">
+\[ I = I_0 - hr \]</div>
+<div class="math notranslate nohighlight">
+\[ G = G_0 \]</div>
+<div class="math notranslate nohighlight">
+\[ X = X_0 \]</div>
+<div class="math notranslate nohighlight">
+\[ M = mY^d \]</div>
+<p>Si sumamos todas estas, encontramos la función de Demanda Agregada:</p>
+<div class="math notranslate nohighlight">
+\[ DA = C + I + G + X - M \]</div>
+<p>Ahora tomamos la función de Ingreso disponible:</p>
+<div class="math notranslate nohighlight">
+\[ Y^d = Y(1 - t) \]</div>
+<p>y la reemplazamos en la función de la demanda agregada:</p>
+<div class="math notranslate nohighlight">
+\[ DA = C_0 + I_0 + G_0 + X_0 - hr + Y(b - m)(1 - t) \]</div>
+<p>Esta función se puede escribir de la siguiente manera, con dos partes alpha:</p>
+<div class="math notranslate nohighlight">
+\[ DA = α_0 + α_1Y \]</div>
+<p>α_0 sería el intercepto, que son todos los gastos autónomos, y α_1 sería la pendiente.</p>
+<p>Recordemos que el equilibrio es DA = Y, por lo que podemos decir que:</p>
+<div class="math notranslate nohighlight">
+\[ Y = C_0 + bY^d + I_0 -hr + G_0 + X_0 - mY^d \]</div>
+<div class="math notranslate nohighlight">
+\[ Y^e = \frac{1}{1 - (b - m)(1 - t)} (C_0 + I_0 + G_0 + X_0 - hr) \]</div>
+<p>Donde “1/ 1-b-m 1-t” representa al multiplicador keynesiano “k”. Esta sería la ecuación de equilibrio del modelo Ingreso-Gasto keynesiano.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parámetros</span>
+
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="c1"># b &gt; m</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+<span class="c1"># Ecuación de la curva del ingreso de equilibrio</span>
+
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_IS_K</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.5</span> 
+
+<span class="k">def</span> <span class="nf">L_45</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">L_45</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">L_45</span>
+
+<span class="n">L_45</span> <span class="o">=</span> <span class="n">L_45</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DA_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> <span class="c1">#Demanda agregada</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">L_45</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#404040&quot;</span><span class="p">)</span> <span class="c1">#Línea de 45º</span>
+
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">70.5</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mf">0.69</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">176</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">146</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="s1">&#39;$DA^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="s1">&#39;$α_o$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;$45°$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;$◝$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#404040&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">86</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;$DA = α_0 + α_1Y$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">97</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="s1">&#39;$α_1 = (b-m)(1-t)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span> <span class="s1">&#39;$α_0 = (C_0 + I_0 + G_0 + X_0 - hr)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">143</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span> <span class="mi">130</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">180</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-&gt;&quot;</span><span class="p">))</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;El ingreso de Equilibrio a Corto Plazo&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;DA&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_16_0.png" src="_images/r1_16_0.png" />
+</div>
+</div>
+<p>Aquí el punto de equilibrio tiene un intercepto de 147.63, mientras que la pendiente equivale a 0.42 (Y).</p>
+</section>
+<section id="pregunta-5">
+<h3>Pregunta 5<a class="headerlink" href="#pregunta-5" title="Permalink to this headline">#</a></h3>
+<section id="politica-fiscal-expansiva-con-aumento-del-gasto-de-gobierno">
+<h4>Política Fiscal Expansiva con aumento del Gasto de Gobierno:<a class="headerlink" href="#politica-fiscal-expansiva-con-aumento-del-gasto-de-gobierno" title="Permalink to this headline">#</a></h4>
+<p>Intuitivo: $<span class="math notranslate nohighlight">\( ↑Go → ↑DA → DA &gt; Y → ↑Y \)</span>$</p>
+<p>Si aumenta el gasto del gobierno, al ser un valor positivo de la ecuación de DA, entonces aumenta la demanda agregada. Entonces, si la DA aumenta, va a ser mayor que el Ingreso Agregado. Por consecuencia, el Ingreso debe de aumentar para regresar al equilibrio.</p>
+<p>Matemático: <span class="math notranslate nohighlight">\(∆G_0 &gt; 0  →  ¿∆Y?\)</span> Debemos identificar cómo va a variar el Ingreso para regresar al equilibrio si aumenta el Gasto autónomo.</p>
+<div class="math notranslate nohighlight">
+\[ Y = \frac{1}{1 - (b - m)(1 - t)} (C_0 + I_0 + G_0 + X_0 - hr) \]</div>
+<p>Pero, si no ha habido cambios en <span class="math notranslate nohighlight">\(C_0\)</span>, <span class="math notranslate nohighlight">\(I_0\)</span>, <span class="math notranslate nohighlight">\(X_0\)</span>, <span class="math notranslate nohighlight">\(h\)</span> ni <span class="math notranslate nohighlight">\(r\)</span>, entonces la variación de Y solo se dará en términos del gasto autónomo:</p>
+<div class="math notranslate nohighlight">
+\[∆C_0 = ∆I_0 = ∆X_0 = ∆h = ∆r = 0\]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y = k (∆G_0) \]</div>
+<p>Sabiendo que <span class="math notranslate nohighlight">\(∆G_0 &gt; 0 \)</span>, es decir, que aumento el gasto, y que <span class="math notranslate nohighlight">\(k &gt; 0\)</span>, la multiplicación de un número positivo con otro positivo dará positivo:</p>
+<div class="math notranslate nohighlight">
+\[ ∆Y = (+)(+) \]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y &gt; 0 \]</div>
+<p>Por lo tanto, el ingreso aumentará como consecuencia del aumento del gasto de gobierno.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Gráfico: vamos a graficar la curva de equilibrio original, y luego </span>
+<span class="c1">#vamos a graficar la nueva curva, con un aumento del Gasto de gobierno.</span>
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># Curva de ingreso de equilibrio ORIGINAL</span>
+
+    <span class="c1"># Parámetros</span>
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+    <span class="c1"># Ecuación </span>
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_IS_K</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># NUEVA curva de ingreso de equilibrio con aumento del Gasto de gobierno</span>
+
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">80</span>
+
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_G</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DA_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> <span class="c1">#curva ORIGINAL</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_G</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA_G&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#EE7600&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="c1">#NUEVA curva</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">L_45</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#404040&quot;</span><span class="p">)</span> <span class="c1">#línea de 45º</span>
+
+<span class="c1"># Lineas punteadas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">75</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.73</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">187</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.73</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">61</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.61</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">152</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.61</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Texto agregado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="s1">&#39;$DA^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="s1">&#39;$DA_G$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;$45°$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;$◝$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#404040&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y_G$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;$→$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="s1">&#39;$↑$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Aumento del Gasto del Gobierno $(G_0)$&quot;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;DA&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_21_0.png" src="_images/r1_21_0.png" />
+</div>
+</div>
+</section>
+<section id="politica-fiscal-expansiva-con-una-reduccion-de-la-tasa-de-tributacion">
+<h4>Política Fiscal expansiva con una reducción de la Tasa de Tributación:<a class="headerlink" href="#politica-fiscal-expansiva-con-una-reduccion-de-la-tasa-de-tributacion" title="Permalink to this headline">#</a></h4>
+<p>Intuitivo: $<span class="math notranslate nohighlight">\( t↓ → Co↑ → DA↑ → DA &gt; Y → Y↑ \)</span><span class="math notranslate nohighlight">\(
+            \)</span><span class="math notranslate nohighlight">\( t↓ → M↑ → DA↓ → DA &lt; Y → Y↓ \)</span>$</p>
+<p>Al bajar la tasa impositiva, el consumo aumenta, ya que las personas mantienen más dinero disponible para su consumo. Por lo tanto, aumenta la demanda agregada, y por consecuencia, requiere que aumente el Ingreso Agregado para volver al equilibrio.</p>
+<p>Asimismo, una disminución de la tasa impositiva genera que aumenten las importaciones. Esto reduce la demanda agregada, y genera un déficit de demanda, que solo regresará al equilibrio con una disminución del Ingreso.</p>
+<p>Sin embargo, debido a que “b” es mayor que “m”, concluyo que el impacto del consumo siempre va a ser mayor que el impacto de las importaciones. Así disminuya Y por las importaciones, el aumento de Y debido al consumo hará que el diferencial de Y sea finalmente positivo.</p>
+<p>Matemática: <span class="math notranslate nohighlight">\(∆t &lt; 0  →  ¿∆Y?\)</span></p>
+<p>Tenemos el siguiente diferencial de la tasa de tributación:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{∆Y}{∆t} = \frac{(m-b)(Co + Go + Io + Xo - hr)}{(1-(1-t)(b-m)+1)^2} \]</div>
+<p>Sin embargo, sabemos que “b” es mayor que “m”. Por lo que saldrá un número negativo al hacer m-b. Por lo tanto, la primera parte de nuestro ecuación es negativa (-).</p>
+<p>Además, los componentes autónomos no cambian, lo que nos da un diferencial de 0. Por lo tanto, el numerador será negativo.</p>
+<p>En el denominador será positivo (+) en cambio, porque se eleva al cuadrado, lo que siempre da un resultado positivo.</p>
+<p>Por lo tanto, tenemos la siguiente división:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{∆Y}{∆t} = \frac{(-)}{(+)} \]</div>
+<p>Pero sabemos que el diferencial de la tasa impositiva es menor que 0, por lo que la ecuación se vuelve esto:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{∆Y}{(-)} = \frac{(-)}{(+)} \]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y = \frac{(-)(-)}{(+)} \]</div>
+<p>Por lo tanto, el resultado final del diferencial será un número positivo entre otro positivo, por lo que el diferencial de Y es positivo.</p>
+<div class="math notranslate nohighlight">
+\[ ∆Y &gt; 0 \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Gráfico de la reducción de la tasa de tributación.</span>
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># Curva de ingreso de equilibrio ORIGINAL</span>
+
+    <span class="c1"># Parámetros</span>
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="c1">#tasa de tributación</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+    <span class="c1"># Ecuación </span>
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_IS_K</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># NUEVA curva de ingreso de equilibrio</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+<span class="c1"># Generar la ecuación con el nuevo parámetros</span>
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_t</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DA_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> <span class="c1">#curva ORIGINAL</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_t</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA_t&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#EE7600&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="c1">#NUEVA curva</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">L_45</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#404040&quot;</span><span class="p">)</span> <span class="c1">#línea de 45º</span>
+
+<span class="c1"># Lineas punteadas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mf">70.5</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.69</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">176</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">77</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">192</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Texto agregado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="s1">&#39;$DA^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;$DA_t$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;$45°$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;$◝$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#404040&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y_t$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;$→$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="s1">&#39;$↑$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Reducción de la Tasa de Tributación&quot;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;DA&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_24_0.png" src="_images/r1_24_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="pregunta-6">
+<h3>Pregunta 6<a class="headerlink" href="#pregunta-6" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parámetros del modelo contracíclico: nuevo parámetro &quot;g&quot;</span>
+
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span> <span class="c1"># b &gt; m</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+<span class="c1"># Ecuación de la curva del ingreso de equilibrio, incluyendo a &quot;g&quot;</span>
+
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">(((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_IS_K</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.5</span> 
+
+<span class="k">def</span> <span class="nf">L_45</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">L_45</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">L_45</span>
+
+<span class="n">L_45</span> <span class="o">=</span> <span class="n">L_45</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DA_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> <span class="c1">#Demanda agregada</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">L_45</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#404040&quot;</span><span class="p">)</span> <span class="c1">#Línea de 45º</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">58</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mf">0.58</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">145</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.58</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">126</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="s1">&#39;$DA^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="s1">&#39;$α_o$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;$45°$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;$◝$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#404040&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">82</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="s1">&#39;$DA = α_0 + α_1 Y$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#3D59AB&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="s1">&#39;$α_1 = [(b-m)(1-t)-g]$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">73</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="s1">&#39;$α_0 = C_o + I_o + G_o + X_o - hr$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="s1">&#39;$↑$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">87</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="s1">&#39;$↓$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;El ingreso de Equilibrio a Corto Plazo con regla contracíclica&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;DA&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_27_0.png" src="_images/r1_27_0.png" />
+</div>
+</div>
+<p>Aquí el punto de equilibrio tiene un intercepto de 145, mientras que la pendiente equivale a 0.32 (Y).</p>
+<section id="equilibrio-con-regla-contraciclica">
+<h4>Equilibrio con regla contracíclica<a class="headerlink" href="#equilibrio-con-regla-contraciclica" title="Permalink to this headline">#</a></h4>
+<p>Primero tenemos las ecuaciones del gasto:</p>
+<div class="math notranslate nohighlight">
+\[ C = C_0 + bY^d \]</div>
+<div class="math notranslate nohighlight">
+\[ I = I_0 - hr \]</div>
+<div class="math notranslate nohighlight">
+\[ G = G_0 - gY \]</div>
+<div class="math notranslate nohighlight">
+\[ X = X_0 \]</div>
+<div class="math notranslate nohighlight">
+\[ M = mY^d \]</div>
+<p>Pero ahora el gasto del gobierno tiene un nuevo componente “-gY”.</p>
+<p>Si sumamos todas estas, encontramos la función de Demanda Agregada:</p>
+<div class="math notranslate nohighlight">
+\[ DA = C + I + G + X - M \]</div>
+<p>Ahora tomamos la función de Ingreso disponible:</p>
+<div class="math notranslate nohighlight">
+\[ Y^d = Y(1 - t) \]</div>
+<p>y la reemplazamos en la función de la demanda agregada:</p>
+<div class="math notranslate nohighlight">
+\[ DA = C_0 + I_0 + G_0 + X_0 - hr + Y((b - m)(1 - t)-g) \]</div>
+<p>Esta función se puede escribir de la siguiente manera, con dos partes alpha:</p>
+<div class="math notranslate nohighlight">
+\[ DA = α_0 + α_0Y \]</div>
+<p>α_0 sería el intercepto y α_1 sería la pendiente.</p>
+<p>Recordemos que el equilibrio es DA = Y, por lo que podemos decir que:</p>
+<div class="math notranslate nohighlight">
+\[ Y = C_0 + bY^d + I_0 -hr + G_0 - gY + X_0 - mY^d \]</div>
+<div class="math notranslate nohighlight">
+\[ Y^e = \frac{1}{1 - (b - m)(1 - t) + g} (C_0 + I_0 + G_0 + X_0 - hr) \]</div>
+<p>Lo que cambia es que tenemos a “g” en el denominador del multiplicador keynesiano. Esta sería la ecuación de equilibrio del modelo Ingreso-Gasto keynesiano.</p>
+</section>
+<section id="id1">
+<h4>Política Fiscal Expansiva con aumento del Gasto de Gobierno:<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<p>Intuitivo: $<span class="math notranslate nohighlight">\( ↑Go → ↑DA → DA &gt; Y → ↑Y \)</span>$</p>
+<p>Si aumenta el gasto del gobierno esto genera que aumente la demanda agregada. Entonces, si la DA aumenta, va a ser mayor que el Ingreso Agregado. Por consecuencia, el Ingreso debe de aumentar para regresar al equilibrio. Con la adición del parámetro “g”, la pendiente de la curva va a disminuír, pero igual obliga al ingreso agregado a aumentar para regresar al equilibrio.</p>
+<p>Matemático: <span class="math notranslate nohighlight">\(∆G_0 &gt; 0  →  ¿∆Y?\)</span> Debemos identificar cómo va a variar el Ingreso para regresar al equilibrio si aumenta el Gasto autónomo.</p>
+<div class="math notranslate nohighlight">
+\[ Y = \frac{1}{1 - (b - m)(1 - t) + g} (C_0 + I_0 + G_0 + X_0 - hr) \]</div>
+<p>Ahora que tenemos a “g” en la ecuación, su efecto es que aumenta la magnitud del denominador, por lo que el tamaño de la pendiente se reduce.</p>
+<p>Igual que antes, no ha habido cambios en <span class="math notranslate nohighlight">\(C_0\)</span>, <span class="math notranslate nohighlight">\(I_0\)</span>, <span class="math notranslate nohighlight">\(X_0\)</span>, <span class="math notranslate nohighlight">\(h\)</span> ni <span class="math notranslate nohighlight">\(r\)</span>, entonces la variación de Y solo se dará en términos del gasto autónomo:</p>
+<div class="math notranslate nohighlight">
+\[∆C_0 = ∆I_0 = ∆X_0 = ∆h = ∆r = 0\]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y = k (∆G_0) \]</div>
+<p>Sabiendo que <span class="math notranslate nohighlight">\(∆G_0 &gt; 0 \)</span>  y que <span class="math notranslate nohighlight">\(k &gt; 0\)</span>, la multiplicación de un número positivo con otro positivo dará positivo:</p>
+<div class="math notranslate nohighlight">
+\[ ∆Y = (+)(+) \]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y &gt; 0 \]</div>
+<p>Por lo tanto, el ingreso aumentará como consecuencia del aumento del gasto de gobierno.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Gráfico: vamos a graficar la curva de equilibrio original, y luego </span>
+<span class="c1">#vamos a graficar la nueva curva, con el aumento del gasto de gobierno.</span>
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># Curva de ingreso de equilibrio ORIGINAL</span>
+
+    <span class="c1"># Parámetros</span>
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+    <span class="c1"># Ecuación </span>
+<span class="k">def</span> <span class="nf">DA_IS_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_IS_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">(((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_IS_K</span>
+
+<span class="n">DA_IS_K</span> <span class="o">=</span> <span class="n">DA_IS_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># NUEVA curva de ingreso de equilibrio con aumento del Gasto de gobierno</span>
+
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">80</span>
+
+<span class="k">def</span> <span class="nf">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">(((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_K</span>
+
+<span class="n">DA_G</span> <span class="o">=</span> <span class="n">DA_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DA_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> <span class="c1">#curva ORIGINAL</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_G</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA_G&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#EE7600&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="c1">#NUEVA curva</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">L_45</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#404040&quot;</span><span class="p">)</span> <span class="c1">#línea de 45º</span>
+
+<span class="c1"># Lineas punteadas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">72</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.71</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">180</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.71</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">58</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.57</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">145</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.57</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Texto agregado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="s1">&#39;$DA^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="s1">&#39;$DA_G$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;$45°$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;$◝$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#404040&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y_G$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;$→$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="s1">&#39;$↑$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Aumento del Gasto del Gobierno $(G_0)$&quot;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;DA&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_32_0.png" src="_images/r1_32_0.png" />
+</div>
+</div>
+<p>El parámetro “g” aumenta el tamaño del denominador del multiplicador keynesiano, ya que se lo suma a los valores del denominador. Por lo tanto, si aumenta la magnitud del denominador, entonces se reducirá el tamaño de “k”, por lo que la pendiente de la recta de DA también se reducirá.</p>
+<p>A diferencia del modelo de la pregunta 5, el valor de “k” es menor, ya que el denominador ha aumentado por la adición de “g”. Por lo tanto, si “k” es menor, el impacto de un aumento del gasto de gobierno se reducirá, a diferencia de cuando no existía el parámetro “g”. El tamaño del efecto de la política fiscal se reducirá, ya que el parámetro “g” reduce la pendiente. Por lo tanto, el efecto de la política fiscal de aumento de gasto de goberno en el modelo 6 es menor que el tamaño del efecto en el modelo 5.</p>
+</section>
+<section id="crisis-mundial-que-reduce-exportaciones">
+<h4>Crisis mundial que reduce exportaciones:<a class="headerlink" href="#crisis-mundial-que-reduce-exportaciones" title="Permalink to this headline">#</a></h4>
+<p>Intuitivo: $<span class="math notranslate nohighlight">\( ↓X → ↓DA → DA &lt; Y → ↓Y \)</span>$</p>
+<p>Si disminuyen las exportaciones, entra menos dinero a la economía nacional, por lo que disminuye la DA, y las exportacines netas se reducen. Esto genera que haya más Ingreso, por lo que este deberá disminuír para regresar al equilibrio.</p>
+<p>Matemático: <span class="math notranslate nohighlight">\(∆X_0 &lt; 0  →  ¿∆Y?\)</span> Debemos identificar cómo va a variar el Ingreso para regresar al equilibrio si aumenta el Gasto autónomo.</p>
+<div class="math notranslate nohighlight">
+\[ Y = \frac{1}{1 - (b - m)(1 - t) + g} (C_0 + I_0 + G_0 + X_0 - hr) \]</div>
+<p>Igual que antes, no ha habido cambios en <span class="math notranslate nohighlight">\(C_0\)</span>, <span class="math notranslate nohighlight">\(I_0\)</span>, <span class="math notranslate nohighlight">\(G_0\)</span>, <span class="math notranslate nohighlight">\(h\)</span>, <span class="math notranslate nohighlight">\(r\)</span> ni <span class="math notranslate nohighlight">\(g\)</span>, entonces la variación de Y solo se dará en términos de las exportaciones:</p>
+<div class="math notranslate nohighlight">
+\[∆C_0 = ∆I_0 = ∆G_0 = ∆h = ∆r = ∆g = 0\]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y = k (∆X_0) \]</div>
+<p>Sabiendo que <span class="math notranslate nohighlight">\(∆X_0 &lt; 0 \)</span>  y que <span class="math notranslate nohighlight">\(k &gt; 0\)</span>, la multiplicación de un número negativo con otro positivo dará negativo:</p>
+<div class="math notranslate nohighlight">
+\[ ∆Y = (-)(+) \]</div>
+<div class="math notranslate nohighlight">
+\[ ∆Y &lt; 0 \]</div>
+<p>Por lo tanto, el ingreso disminuirá como consecuencia de la reducción de las exportaciones.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Gráfico: vamos a graficar la curva de equilibrio original, y luego </span>
+<span class="c1">#vamos a graficar la nueva curva, con la reducción de exportaciones.</span>
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># Curva de ingreso de equilibrio ORIGINAL</span>
+
+    <span class="c1"># Parámetros</span>
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span> 
+
+<span class="n">Co</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">Io</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">Go</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+    <span class="c1"># Ecuación </span>
+<span class="k">def</span> <span class="nf">DA_IS_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_IS_K</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">(((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_IS_K</span>
+
+<span class="n">DA_IS_K</span> <span class="o">=</span> <span class="n">DA_IS_K</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+
+<span class="c1">#--------------------------------------------------</span>
+<span class="c1"># NUEVA curva de ingreso de equilibrio con reducción de exportaciones</span>
+
+<span class="n">Xo</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">DA_X</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">DA_X</span> <span class="o">=</span> <span class="p">(</span><span class="n">Co</span> <span class="o">+</span> <span class="n">Io</span> <span class="o">+</span> <span class="n">Go</span> <span class="o">+</span> <span class="n">Xo</span> <span class="o">-</span> <span class="n">h</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="o">+</span> <span class="p">(((</span><span class="n">b</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">DA_X</span>
+
+<span class="n">DA_X</span> <span class="o">=</span> <span class="n">DA_X</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Io</span><span class="p">,</span> <span class="n">Go</span><span class="p">,</span> <span class="n">Xo</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DA_IS_K</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_IS_K</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#3D59AB&quot;</span><span class="p">)</span> <span class="c1">#curva ORIGINAL</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">DA_X</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;DA_X&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#EE7600&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="c1">#NUEVA curva</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">L_45</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#404040&quot;</span><span class="p">)</span> <span class="c1">#línea de 45º</span>
+
+<span class="c1"># Lineas punteadas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">66</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.66</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">166</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.66</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.60</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">148</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="mf">0.59</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Texto agregado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="s1">&#39;$DA^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="s1">&#39;$DA_G$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;$45°$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mf">11.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;$◝$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#404040&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y_G$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#EE7600&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;$Y^e$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">62</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;$←$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="s1">&#39;$↓$&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Reducción de exportaciones $(X_0)$&quot;</span><span class="p">,</span> <span class="n">xlabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;DA&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r1_36_0.png" src="_images/r1_36_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="r2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modelo Ingreso-Gasto: la Curva IS</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alexander Du-Bois Arana<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,1374 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Mercado de dinero y curva LM &#8212; Fundamentos de Macroeconomia</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modelo IS-LM" href="r4.html" />
+    <link rel="prev" title="Modelo Ingreso-Gasto: la Curva IS" href="r2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentos de Macroeconomia</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="r1.html">
+   Modelo Ingreso-Gasto Keynesiano
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r2.html">
+   Modelo Ingreso-Gasto: la Curva IS
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Mercado de dinero y curva LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r4.html">
+   Modelo IS-LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r5.html">
+   Modelo DA-OA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r6.html">
+   Closing the Gap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r7.html">
+   Randomized Control Trial (RCT)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r8.html">
+   Instrumental Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r9.html">
+   Social Media and Mental Health
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r10.html">
+   Regression Discontinuity (RDD)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/r3.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fr3.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/r3.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pregunta-1">
+   Pregunta 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-cuales-son-los-intrumentos-de-politica-monetaria-que-puede-utilizar-el-banco-central">
+     Explique cuáles son los intrumentos de política monetaria que puede utilizar el Banco Central.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derive-la-oferta-real-de-dinero-y-explique-cada-uno-de-sus-componentes">
+     Derive la oferta real de dinero y explique cada uno de sus componentes.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derive-la-demanda-real-de-dinero-explique-que-papel-cumplen-los-parametros-k-y-j">
+     Derive la demanda real de dinero. Explique qué papel cumplen los parametros “k” y “j”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#asumiendo-que-no-hay-inflacion-podemos-asumir-que-i-r-escriba-en-terminos-reales-la-eucacion-de-equilibrio-en-el-mercado-de-dinero">
+     Asumiendo que no hay inflación podemos asumir que i=r. Escriba en terminos reales la eucacion de equilibrio en el mercado de dinero.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grafique-el-equilibrio-en-el-mercado-de-dinero">
+     Grafique el equilibrio en el mercado de dinero.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pregunta-2">
+   Pregunta 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-y-es-menor-a-0">
+     Explique y grafique qué sucede en el mercado de dinero si el diferencial de Y es menor a 0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-k-es-menor-a-0">
+     Explique y grafique qué sucede en el mercado de dinero si el diferencial de k es menor a 0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-ms-es-menor-a-0">
+     Explique y grafique qué sucede en el mercado de dinero si el diferencial de Ms es menor a 0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pregunta-3">
+   Pregunta 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derive-paso-a-paso-la-curva-lm-matematicamente-a-partir-del-equilibrio-en-el-mercado-monetario-y-grafique">
+     Derive paso a paso la curva LM matemáticamente (a partir del equilibrio en el Mercado Monetario) y grafique.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cual-es-el-efecto-de-una-disminucion-en-la-masa-monetaria-si-el-diferencial-de-ms-es-menor-a-0-explica-usando-la-intuicion-y-graficos">
+     ¿Cuál es el efecto de una disminución en la Masa Monetaria si el diferencial de Ms es menor a 0? Explica usando la intuición y gráficos.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cual-es-el-efecto-de-un-aumento-en-k-explica-usando-intuicion-y-graficos">
+     ¿Cuál es el efecto de un aumento en k. Explica usando intuición y gráficos.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mercado de dinero y curva LM</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pregunta-1">
+   Pregunta 1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-cuales-son-los-intrumentos-de-politica-monetaria-que-puede-utilizar-el-banco-central">
+     Explique cuáles son los intrumentos de política monetaria que puede utilizar el Banco Central.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derive-la-oferta-real-de-dinero-y-explique-cada-uno-de-sus-componentes">
+     Derive la oferta real de dinero y explique cada uno de sus componentes.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derive-la-demanda-real-de-dinero-explique-que-papel-cumplen-los-parametros-k-y-j">
+     Derive la demanda real de dinero. Explique qué papel cumplen los parametros “k” y “j”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#asumiendo-que-no-hay-inflacion-podemos-asumir-que-i-r-escriba-en-terminos-reales-la-eucacion-de-equilibrio-en-el-mercado-de-dinero">
+     Asumiendo que no hay inflación podemos asumir que i=r. Escriba en terminos reales la eucacion de equilibrio en el mercado de dinero.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grafique-el-equilibrio-en-el-mercado-de-dinero">
+     Grafique el equilibrio en el mercado de dinero.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pregunta-2">
+   Pregunta 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-y-es-menor-a-0">
+     Explique y grafique qué sucede en el mercado de dinero si el diferencial de Y es menor a 0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-k-es-menor-a-0">
+     Explique y grafique qué sucede en el mercado de dinero si el diferencial de k es menor a 0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-ms-es-menor-a-0">
+     Explique y grafique qué sucede en el mercado de dinero si el diferencial de Ms es menor a 0
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pregunta-3">
+   Pregunta 3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derive-paso-a-paso-la-curva-lm-matematicamente-a-partir-del-equilibrio-en-el-mercado-monetario-y-grafique">
+     Derive paso a paso la curva LM matemáticamente (a partir del equilibrio en el Mercado Monetario) y grafique.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cual-es-el-efecto-de-una-disminucion-en-la-masa-monetaria-si-el-diferencial-de-ms-es-menor-a-0-explica-usando-la-intuicion-y-graficos">
+     ¿Cuál es el efecto de una disminución en la Masa Monetaria si el diferencial de Ms es menor a 0? Explica usando la intuición y gráficos.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cual-es-el-efecto-de-un-aumento-en-k-explica-usando-intuicion-y-graficos">
+     ¿Cuál es el efecto de un aumento en k. Explica usando intuición y gráficos.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mercado-de-dinero-y-curva-lm">
+<h1>Mercado de dinero y curva LM<a class="headerlink" href="#mercado-de-dinero-y-curva-lm" title="Permalink to this headline">#</a></h1>
+<section id="lectura">
+<h2>Lectura<a class="headerlink" href="#lectura" title="Permalink to this headline">#</a></h2>
+<p>La investigación de Mendoza, Macinlla y Velarde tiene como objetivo analizar y replicar, mediante un modelo macroeconómico, los efectos producidos en la economía nacional durante el período de la cuarentena en la pandemia por el COVID 19 en el año 2020, que produjo una de las caídas más duras del PBI en LATAM y sobre todo en Perú. Los investigadores proponen entonces un modelo de 2 sectores para reproducir lo sucedido durante la pandemia, y a su vez los efectos de su fin, que poco a poco llevaron a reestabilizar la producción.</p>
+<p>Una de las principales fortalezas de esta investigación es la interrelación que se realiza entre ambos sectores del mercado de bienes. Mientras el sector 1 de servicios se ve afectado, esta situación tiene consecuencias en el sector 2, de bienes indispensables. Esto genera un dinamismo, y demuestra que la economía no cuenta con diversos sectores que se interrelacionan y afectan mutuamente. Asimismo, es ventajoso que el modelo se pruebe con diferentes situaciones, tanto choques permanentes com transitorios, ya que esto pone a prueba las hipótesis de los investigadores en diferentes casos. Finalmente, otro punto a favor de la investigación es que reconoce que este no es el último paso para investigar este tema, y reconoce que hace falta llevar este tipo de análisis por otras rutas, como por ejemplo, tomando en cuenta las expectativas racionales de los actores, lo que le daría un aspecto más social a la investigación.</p>
+<p>Por otro lado, a pesar de las ventajas de este modelo, también podemos identificar algunas debilidades. En primer lugar, tal y como los autores lo especifican, este modelo solo incluye 2 sectores keynesianos del mercado de bienes. Es decir, el mercado monetario no afecta a la producción, y la única conexión entre ambos mercados es la tasa de interés, que ya es fija. Esto limita la investigación, ya que en la realidad las decisiones del banco central sobre la oferta monetaria tienen un efecto en la producción y la demanda. Asimismo, los factores internacionales no son tomados en cuenta al momento del análisis. Durante la pandemia, las importaciones también se vieron afectadas, pero esto no se toma en cuenta dentro del modelo, que no incluye a las exportaciones netas dentro de su fórmula de demanda agregada.</p>
+<p>El aporte de esta investigación es vasto. El modelo resulta interesante, ya que combina 2 sectores del mercado de bienes: uno directamente afectado por la pandemia, el de servicios; y otro indirectamente afectado, el de bienes indispensables. Pero lo particular de esta investigación es que combina ambos sectores, y evalúa los efectos que cada uno de ellos tienen sobre el otro. Mediante la simulación de los efectos de la pandemia en estos sectores, que generó la mayor contracción económica desde la guerra con Chile, podemos analizar su efecto en la producción, incluso en diferentes sitaciones, como choques permamentes de oferta y demanda, y luego con choques transitorios. Tomar en cuenta los efectos indirectos de la cuarentena es crucial, ya que muchas otras investigaciones se centran en ver los efectos directos de la disminución de la producción en el PBI. En cambio, esta investigación reproduce de manera más orgánica el funcionamiento de una economía nacional interdependiente.</p>
+<p>Asimismo, podemos pensar en algunos avances que se podrían realizar en investigaciones sobre este tema. Por ejemplo, se podría proponer un modelo con más o diferentes sectores, incluyendo por ejemplo el mercado internacional, o también utilizando la oferta monetaria como variable exógena. Tomar en cuenta la respuesta del gobierno a la economía, en vez de solamente su respuesta sanitaria por medio de la cuarentena, podría mostrar más factores que afectaron a la producción nacional durante la pandemia. Por otro lado, se podrían proponer nuevos tipos de modelos no keynesianos para analizar el efecto de la pandemia en la economía. Por ejemplo, Brancaccio propone en su libro nuevas alternativas a los modelos dominantes de la macroeconomía de Blanchard, en el cual Mendoza y demás autores se basan. Se presentan alternativas estructurales al modelo de Blanchard, con el objetivo de demostrar que la economía es mucho más compleja, y se critican concepciones como el “corto y largo plazo”, que simplifican los impactos de las crisis económicas. Esto no quiere decir que los modelos de Blanchard deban ser descartados, pero se abre la discusión acerca de nuevos acercamientos a la economía. Sería interesante utilizar estos modelos alternativos y aplicarlos a casos recientes, que nunca antes se habían experimentado en la edad contemporánea, como la pandemia y la cuarentena en el Perú.</p>
+<p>Bibliografía:</p>
+<ul class="simple">
+<li><p>Mendoza, W., Mancilla, L., &amp; Velarde, R. La Macroeconomía de la cuarentena: Un modelo de dos sectores.</p></li>
+<li><p>Brancaccio, E., &amp; Califano, A. (2022). Anti-Blanchard Macroeconomics: A Comparative Approach. Edward Elgar Publishing.</p></li>
+</ul>
+</section>
+<section id="codigo">
+<h2>Código<a class="headerlink" href="#codigo" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sy</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">networkx</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">from</span> <span class="nn">statsmodels.iolib.summary2</span> <span class="kn">import</span> <span class="n">summary_col</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pregunta-1">
+<h2>Pregunta 1<a class="headerlink" href="#pregunta-1" title="Permalink to this headline">#</a></h2>
+<section id="explique-cuales-son-los-intrumentos-de-politica-monetaria-que-puede-utilizar-el-banco-central">
+<h3>Explique cuáles son los intrumentos de política monetaria que puede utilizar el Banco Central.<a class="headerlink" href="#explique-cuales-son-los-intrumentos-de-politica-monetaria-que-puede-utilizar-el-banco-central" title="Permalink to this headline">#</a></h3>
+<p>El Banco Central tiene 3 instrumentos de política monetaria, que pueden ser tanto expansiva o contractiva. El primero es la Operación de Mercado Abierto, donde el Banco compra o vende activos financieros o bonos a los bancos comerciales. Si compra bonos del mercado, entonces es una política expansiva, ya que aumenta la base monetaria y en consecuencia la oferta monetaria. Si vende bonos, entonces es una política contractiva.</p>
+<p>El segundo instrumento es el coeficiente legal de encaje, donde el Banco Central puede incrementar o disminuír la cantidad de dinero que tienen los bancos para realizar préstamos. Si decide disminuír la tasa de encaje, entonces aumenta la posibilidad de creación de dinero bancario ya que aumenta el multiplicador de dinero bancario, lo que aumenta la oferta monetaria. Al contrario, si aumenta la tasa de encaje, se reduce el multiplicador, y disminuye la oferta monetaria.</p>
+<p>Finalmente, el tercer instrumento es la tasa de interés de referencia de la política monetaria, que modifica la cantidad de dinero prestado a los bancos comerciales. Si se reduce la tasa, los bancos podrán obtener prestado máws dinero, aumentando la oferta monetaria. Si aumenta la tasa de interés, entonces se prestará menos dinero, y por lo tanto disminuirá la oferta monetaria.</p>
+</section>
+<section id="derive-la-oferta-real-de-dinero-y-explique-cada-uno-de-sus-componentes">
+<h3>Derive la oferta real de dinero y explique cada uno de sus componentes.<a class="headerlink" href="#derive-la-oferta-real-de-dinero-y-explique-cada-uno-de-sus-componentes" title="Permalink to this headline">#</a></h3>
+<p>La oferta real de dinero se forma con 2 componentes:</p>
+<p>La oferta nominal de dinero: es una variable exógena del modelo, y es un instrumento de política monetaria. Representa la masa de dinero que está en la economía actual.</p>
+<p>Precios: nivel de precios, que es un valor dado debido a que el análisis es a corto plazo.</p>
+<p>Para encontrar el valor real del dinero, que es el valor de dinero que verdaderamente hace circular el BCR, entonces debemos dividir la oferta nominal de dinero entre los precios.</p>
+<div class="math notranslate nohighlight">
+\[ M_s = \frac{M^s_0}{P} \]</div>
+</section>
+<section id="derive-la-demanda-real-de-dinero-explique-que-papel-cumplen-los-parametros-k-y-j">
+<h3>Derive la demanda real de dinero. Explique qué papel cumplen los parametros “k” y “j”<a class="headerlink" href="#derive-la-demanda-real-de-dinero-explique-que-papel-cumplen-los-parametros-k-y-j" title="Permalink to this headline">#</a></h3>
+<p>La demanda real de dinero explica las razones por las que se demanda dinero en una economía.</p>
+<p>Existen dos razones para demandar dinero: transacción y precaución. Ambas condiciones dependen del ingreso Y y del parámetro k, que representa la elasticidad del ingreso, es decir, la sensibilidad de la demanda de dinero ante variaciones en Y. Por lo tanto, la multiplicación de estos dos componentes nos da una primera ecuación:</p>
+<div class="math notranslate nohighlight">
+\[ L_1 = kY \]</div>
+<p>Ahora también debemos tomar en cuenta dónde se guarda el dinero de las personas, por medio de la especulación, que representa la decisión de guardar el dinero en el banco o en el bolsillo. Esto se define por la multiplicación de i, que es la tasa de interés nominal, con j negativo, que representa la elasticidad de sustitución, de tener el dinero en el bolsillo o en el banco. Si aumenta j, entonces la gente pondrá más dinero en el banco, y habrá menos dinero en su bolsillo. Ahora tenemos una segunda ecuación:</p>
+<div class="math notranslate nohighlight">
+\[ L_2 = -ji \]</div>
+<p>La demanda de dinero se consigue entonces obteniendo la cantidad de dinero en el bolsillo de la gente. Es decir, debemos hacer la siguiente ecuación:</p>
+<div class="math notranslate nohighlight">
+\[ M_d = L_1 - L_2 \]</div>
+<div class="math notranslate nohighlight">
+\[ M_d = kY - ji \]</div>
+</section>
+<section id="asumiendo-que-no-hay-inflacion-podemos-asumir-que-i-r-escriba-en-terminos-reales-la-eucacion-de-equilibrio-en-el-mercado-de-dinero">
+<h3>Asumiendo que no hay inflación podemos asumir que i=r. Escriba en terminos reales la eucacion de equilibrio en el mercado de dinero.<a class="headerlink" href="#asumiendo-que-no-hay-inflacion-podemos-asumir-que-i-r-escriba-en-terminos-reales-la-eucacion-de-equilibrio-en-el-mercado-de-dinero" title="Permalink to this headline">#</a></h3>
+<p>El equilibrio en el mercado de dinero se alcanza con el equilibrio entre la oferta de dinero y demanda de dinero:</p>
+<div class="math notranslate nohighlight">
+\[ M^s = M^d \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{M^s_0}{P} = kY - ji \]</div>
+<p>Pero si se supone que no hay inflación, entonces, la tasa de interés nominal y real no debería variar tanto. Por lo tanto podemos decir que la ecuación de equilibrio del mercado de dinero en términos reales es:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{M^s_0}{P} = kY - jr \]</div>
+</section>
+<section id="grafique-el-equilibrio-en-el-mercado-de-dinero">
+<h3>Grafique el equilibrio en el mercado de dinero.<a class="headerlink" href="#grafique-el-equilibrio-en-el-mercado-de-dinero" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parameters</span>
+<span class="n">r_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mf">0.2</span>                
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">MS_0</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">r_size</span><span class="p">)</span>
+
+<span class="c1"># Necesitamos crear la funcion de demanda </span>
+
+<span class="k">def</span> <span class="nf">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">MD_eq</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">MD_eq</span>
+<span class="n">MD_0</span> <span class="o">=</span> <span class="n">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="c1"># Necesitamos crear la oferta de dinero.</span>
+<span class="n">MS</span> <span class="o">=</span> <span class="n">MS_0</span> <span class="o">/</span> <span class="n">P</span>
+<span class="n">MS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Equilibrio en el mercado de Dinero&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;M^s / P&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MD_0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_0$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.47</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;$r^e_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;$L(Y_0)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;$M^s_0 / P_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">custom_xlim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">custom_ylim</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">setp</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="n">custom_xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="n">custom_ylim</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_7_0.png" src="_images/r3_7_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="pregunta-2">
+<h2>Pregunta 2<a class="headerlink" href="#pregunta-2" title="Permalink to this headline">#</a></h2>
+<section id="explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-y-es-menor-a-0">
+<h3>Explique y grafique qué sucede en el mercado de dinero si el diferencial de Y es menor a 0<a class="headerlink" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-y-es-menor-a-0" title="Permalink to this headline">#</a></h3>
+<p>Si el diferencial de Y es menor que 0, eso significa que el ingreso Y va a disminuír. Si disminuye Y, entonces la demanda va a ser mayor Esto genera un exceso de oferta en el mercado, con lo que al disminuír r se podrá regresar al equilibrio.</p>
+<p>Si disminuye Y entonces se genera un movimiento de la curva hacia abajo, donde diminuye el intercepto r.</p>
+<div class="math notranslate nohighlight">
+\[ Y↓ → Y &lt; M_d → r↓ \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parameters con disminución en el nivel del producto</span>
+<span class="n">r_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mf">0.2</span>                
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">Y_1</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">MS_0</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">r_size</span><span class="p">)</span>
+
+<span class="c1"># Necesitamos crear la funcion de demanda </span>
+
+<span class="k">def</span> <span class="nf">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">MD_eq</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">MD_eq</span>
+<span class="n">MD_1</span> <span class="o">=</span> <span class="n">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y_1</span><span class="p">)</span>
+<span class="c1"># Necesitamos crear la oferta de dinero.</span>
+<span class="n">MS</span> <span class="o">=</span> <span class="n">MS_0</span> <span class="o">/</span> <span class="n">P</span>
+<span class="n">MS</span>
+
+<span class="c1"># Equilibrio en el mercado de dinero</span>
+
+<span class="c1"># Creamos el seteo para la figura </span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Agregamos titulo t el nombre de las coordenadas</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Efecto de una disminución del Ingreso Y&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;M^s / P&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ploteamos la demanda de dinero</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MD_0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_0$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+<span class="c1">#ax1.plot(MD_1, label= &#39;$L_0$&#39;, color = &#39;#CD5C5C&#39;)</span>
+
+
+<span class="c1"># Para plotear la oferta de dinero solo necesitamos crear una linea vertical</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Creamos las lineas puntadas para el equilibrio</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="c1"># Agregamos texto</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;$r_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;$(Ms/P)_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;$E_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Nuevas curvas a partir del cambio en el nivel del producto</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MD_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_1$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#4287f5&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;$r_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;$E_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_10_0.png" src="_images/r3_10_0.png" />
+</div>
+</div>
+</section>
+<section id="explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-k-es-menor-a-0">
+<h3>Explique y grafique qué sucede en el mercado de dinero si el diferencial de k es menor a 0<a class="headerlink" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-k-es-menor-a-0" title="Permalink to this headline">#</a></h3>
+<p>K representa la elasticidad del ingreso. Por lo tanto, si k disminuye, entonces la cantidad de dinero que las personas guardan en su bolsillo va a disminuír, y va a haber más dinero en los bancos. Entonces, si k baja, Ms también disminuye, lo que genera que la demanda sea mayor. Por lo tanto, la tasa de interés debe disminuír para regresar al equilibrio. Al disminuír k, la pendiente también se reduce, ya que k multiplica Y en la ecuación de equilibrio, que luego se divide por j.</p>
+<div class="math notranslate nohighlight">
+\[ k↓ → M^d↓ → M^d &lt; M^s → r↓ \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parameters con cambio en el nivel de k</span>
+<span class="n">r_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mf">0.2</span>                
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">MS_0</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">r_size</span><span class="p">)</span>
+
+<span class="c1"># Necesitamos crear la funcion de demanda </span>
+
+<span class="k">def</span> <span class="nf">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">MD_eq</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">MD_eq</span>
+<span class="n">MD_1</span> <span class="o">=</span> <span class="n">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y_1</span><span class="p">)</span>
+<span class="c1"># Necesitamos crear la oferta de dinero.</span>
+<span class="n">MS</span> <span class="o">=</span> <span class="n">MS_0</span> <span class="o">/</span> <span class="n">P</span>
+<span class="n">MS</span>
+
+<span class="c1"># Equilibrio en el mercado de dinero</span>
+
+<span class="c1"># Creamos el seteo para la figura </span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Agregamos titulo t el nombre de las coordenadas</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Disminución de k&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;M^s / P&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ploteamos la demanda de dinero</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MD_0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_0$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+
+<span class="c1"># Para plotear la oferta de dinero solo necesitamos crear una linea vertical</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Creamos las lineas puntadas para el equilibrio</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="c1"># Agregamos texto</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;$r_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;$(Ms/P)_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;$E_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Nuevas curvas a partir del cambio en el nivel del producto</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MD_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_1$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#4287f5&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;$r_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;$E_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_12_0.png" src="_images/r3_12_0.png" />
+</div>
+</div>
+</section>
+<section id="explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-ms-es-menor-a-0">
+<h3>Explique y grafique qué sucede en el mercado de dinero si el diferencial de Ms es menor a 0<a class="headerlink" href="#explique-y-grafique-que-sucede-en-el-mercado-de-dinero-si-el-diferencial-de-ms-es-menor-a-0" title="Permalink to this headline">#</a></h3>
+<p>Si disminuye la cantidad nominal de dinero, entonces la oferta total de dinero va a ser menor. Esto genera que la oferta real de dinero disminuya. Los bancos dejan de comprar bonos, pero la demanda de la gente se mantiene igual y faltan bonos. Entonces, para llegar al equilibrio, debe subir la tasa de interés. Eso se demuestra ya que la recta de oferta se moverá a la izquierda.</p>
+<div class="math notranslate nohighlight">
+\[ M^s↓ → M^s_0↓ → M^s &lt; M^d → r↑ \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parameters con cambio en el nivel del producto</span>
+<span class="n">r_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mf">0.2</span>                
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">MS_0</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">r_size</span><span class="p">)</span>
+
+<span class="c1"># Necesitamos crear la funcion de demanda </span>
+
+<span class="k">def</span> <span class="nf">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">MD_eq</span> <span class="o">=</span> <span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">MD_eq</span>
+<span class="n">MD_1</span> <span class="o">=</span> <span class="n">MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="c1"># Necesitamos crear la oferta de dinero.</span>
+<span class="n">MS_1</span> <span class="o">=</span> <span class="n">MS_0</span> <span class="o">/</span> <span class="n">P</span>
+<span class="n">MS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equilibrio en el mercado de dinero</span>
+
+<span class="c1"># Creamos el seteo para la figura </span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Agregamos titulo t el nombre de las coordenadas</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Disminución de la cantidad de dinero&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;M^s / P&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ploteamos la demanda de dinero</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">MD_0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_0$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+<span class="c1">#ax1.plot(MD_1, label= &#39;$L_0$&#39;, color = &#39;#CD5C5C&#39;)</span>
+
+
+<span class="c1"># Para plotear la oferta de dinero solo necesitamos crear una linea vertical</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="c1"># Creamos las lineas puntadas para el equilibrio</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="c1"># Agregamos texto</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;$r_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;$(Ms/P)_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;$E_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Nuevas curvas a partir del cambio en el nivel del producto</span>
+<span class="c1">#ax1.plot(MD_1, label= &#39;$L_1$&#39;, color = &#39;#4287f5&#39;)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">MS_1</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">11.6</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.32</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;$r_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;$(Ms/P)_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;$E_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_15_0.png" src="_images/r3_15_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="pregunta-3">
+<h2>Pregunta 3<a class="headerlink" href="#pregunta-3" title="Permalink to this headline">#</a></h2>
+<section id="derive-paso-a-paso-la-curva-lm-matematicamente-a-partir-del-equilibrio-en-el-mercado-monetario-y-grafique">
+<h3>Derive paso a paso la curva LM matemáticamente (a partir del equilibrio en el Mercado Monetario) y grafique.<a class="headerlink" href="#derive-paso-a-paso-la-curva-lm-matematicamente-a-partir-del-equilibrio-en-el-mercado-monetario-y-grafique" title="Permalink to this headline">#</a></h3>
+<p>Primero tenemos el equilibrio del mercado monetario.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{M^s_0}{P} = kY - jr \]</div>
+<p>Ahora, podemos seguir derivando esta fórmula para ponerla en función de r, que sería la tasa de interés que equilibra el mercado monetario.</p>
+<div class="math notranslate nohighlight">
+\[ kY - \frac{M^s_0}{P} = jr \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{kY}{j} - \frac{M^s_0}{P} = r \]</div>
+<p>LM = $<span class="math notranslate nohighlight">\( r = -\frac{M^s_0}{Pj} + \frac{k}{j}Y \)</span>$</p>
+<p>Esta sería la ecuación de la curva LM.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1----------------------Equilibrio mercado monetario</span>
+
+    <span class="c1"># Parameters</span>
+<span class="n">r_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mf">0.2</span>                
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="mi">35</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">r_size</span><span class="p">)</span>
+
+
+    <span class="c1"># Ecuación</span>
+<span class="k">def</span> <span class="nf">Ms_MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">Ms_MD</span> <span class="o">=</span> <span class="n">P</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Ms_MD</span>
+
+<span class="n">Ms_MD</span> <span class="o">=</span> <span class="n">Ms_MD</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+
+    <span class="c1"># Nuevos valores de Y</span>
+<span class="n">Y1</span> <span class="o">=</span> <span class="mi">45</span>
+
+<span class="k">def</span> <span class="nf">Ms_MD_Y1</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y1</span><span class="p">):</span>
+    <span class="n">Ms_MD</span> <span class="o">=</span> <span class="n">P</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y1</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Ms_MD</span>
+
+<span class="n">Ms_Y1</span> <span class="o">=</span> <span class="n">Ms_MD_Y1</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y1</span><span class="p">)</span>
+
+
+<span class="n">Y2</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="k">def</span> <span class="nf">Ms_MD_Y2</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y2</span><span class="p">):</span>
+    <span class="n">Ms_MD</span> <span class="o">=</span> <span class="n">P</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">Y2</span> <span class="o">-</span> <span class="n">j</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Ms_MD</span>
+
+<span class="n">Ms_Y2</span> <span class="o">=</span> <span class="n">Ms_MD_Y2</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">Y2</span><span class="p">)</span>
+
+<span class="c1">#2----------------------Curva LM</span>
+
+    <span class="c1"># Parameters</span>
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mf">0.2</span>                
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">10</span>               
+<span class="n">Ms</span> <span class="o">=</span> <span class="mi">30</span>            
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+
+<span class="c1"># Ecuación</span>
+
+<span class="k">def</span> <span class="nf">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">i_LM</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">Ms</span><span class="o">/</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">j</span> <span class="o">+</span> <span class="n">k</span><span class="o">/</span><span class="n">j</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">i_LM</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="n">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gráfico de la derivación de la curva LM a partir del equilibrio en el mercado monetario</span>
+
+    <span class="c1"># Dos gráficos en un solo cuadro</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> 
+
+
+<span class="c1">#---------------------------------</span>
+    <span class="c1"># Gráfico 1: Equilibrio en el mercado de dinero</span>
+    
+<span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Equilibrio en el mercado de dinero&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;M^s / P&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">Ms_MD</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_0$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">Ms_Y1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_1$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">Ms_Y2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;$L_2$&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#CD5C5C&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">135</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">85</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="s2">&quot;$r_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="s2">&quot;$r_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;$r_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+ 
+
+<span class="c1">#---------------------------------</span>
+    <span class="c1"># Gráfico 2: Curva LM</span>
+    
+<span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;LM SCHEDULE&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LM&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#3D59AB&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">160</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.69</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">118</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.53</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">76</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.38</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">67</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="s2">&quot;$r_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="s2">&quot;$r_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="s2">&quot;$r_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">72.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;$Y_2$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">56</span><span class="p">,</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;$Y_1$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;$Y_0$&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mf">0.69</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">53</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mf">0.53</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span>  <span class="n">ymin</span><span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span> <span class="mf">0.38</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_19_0.png" src="_images/r3_19_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Curva LM</span>
+
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">10</span>                
+<span class="n">Ms</span> <span class="o">=</span> <span class="mi">200</span>             
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">20</span>               
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+
+<span class="c1"># Ecuación</span>
+
+<span class="k">def</span> <span class="nf">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">i_LM</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">Ms</span><span class="o">/</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">j</span> <span class="o">+</span> <span class="n">k</span><span class="o">/</span><span class="n">j</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">i_LM</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="n">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1"># Dimensiones del gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">Y_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">]</span>   
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Eliminar las cantidades de los ejes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>   
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">NullLocator</span><span class="p">())</span>
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LM&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#3D59AB&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;LM SCHEDULE&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_20_0.png" src="_images/r3_20_0.png" />
+</div>
+</div>
+</section>
+<section id="cual-es-el-efecto-de-una-disminucion-en-la-masa-monetaria-si-el-diferencial-de-ms-es-menor-a-0-explica-usando-la-intuicion-y-graficos">
+<h3>¿Cuál es el efecto de una disminución en la Masa Monetaria si el diferencial de Ms es menor a 0? Explica usando la intuición y gráficos.<a class="headerlink" href="#cual-es-el-efecto-de-una-disminucion-en-la-masa-monetaria-si-el-diferencial-de-ms-es-menor-a-0-explica-usando-la-intuicion-y-graficos" title="Permalink to this headline">#</a></h3>
+<p>Si disminuye la masa monetaria, entonces se genera un exceso de demanda en el mercado, lo que mueve la curva LM hacia la izquierda. Esto se debe a que el Banco Central está realizando una política contractiva, disminuyendo la cantidad de dinero en la economía. Pero al no haber disminuído la demanda de la población, se da un exceso de esta. Por lo tanto, para regresar al equilibrio, debe de aumentar la tasa de interés, para que disminuya la demanda de dinero.</p>
+<div class="math notranslate nohighlight">
+\[ M^s↓ → M^s_0↓ → M^s &lt; M^d → r↑ \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>                
+<span class="n">Ms</span> <span class="o">=</span> <span class="mi">600</span>             
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">20</span>               
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+<span class="c1"># Ecuación</span>
+
+<span class="k">def</span> <span class="nf">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">i_LM</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">Ms</span><span class="o">/</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">j</span> <span class="o">+</span> <span class="n">k</span><span class="o">/</span><span class="n">j</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">i_LM</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="n">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1">#--------------------------------------------------</span>
+    <span class="c1"># NUEVA curva LM</span>
+
+<span class="c1"># Definir SOLO el parámetro cambiado</span>
+<span class="n">Ms</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Generar la ecuación con el nuevo parámetro</span>
+<span class="k">def</span> <span class="nf">i_LM_Ms</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">i_LM</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">Ms</span><span class="o">/</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">j</span> <span class="o">+</span> <span class="n">k</span><span class="o">/</span><span class="n">j</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">i_LM</span>
+
+<span class="n">i_Ms</span> <span class="o">=</span> <span class="n">i_LM_Ms</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dimensiones del gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">Y_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">]</span>   
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LM&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">i_Ms</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LM_Ms&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#3D59AB&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+
+<span class="c1"># Texto agregado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="s1">&#39;∆$M^s$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;←&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Disminución en la Masa Monetaria $(M^s)$&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_23_0.png" src="_images/r3_23_0.png" />
+</div>
+</div>
+</section>
+<section id="cual-es-el-efecto-de-un-aumento-en-k-explica-usando-intuicion-y-graficos">
+<h3>¿Cuál es el efecto de un aumento en k. Explica usando intuición y gráficos.<a class="headerlink" href="#cual-es-el-efecto-de-un-aumento-en-k-explica-usando-intuicion-y-graficos" title="Permalink to this headline">#</a></h3>
+<p>Si aumenta k, entonces la pendiente de la curva LM va a aumentar. Esto se debe a que si k aumenta, la sensibilidad de los ingresos de las personas para tenerlos en su bolsillo es más alta. Esto genera que se requiera un aumento de la tasa de interés para regresar al equilibrio, para que así las personas decidan poner más de sus ingresos en los bancos.</p>
+<div class="math notranslate nohighlight">
+\[ k↑ → M^d↑ → M^s &lt; M^d → r↑ \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#--------------------------------------------------</span>
+    <span class="c1"># Curva LM ORIGINAL</span>
+
+<span class="c1"># Parámetros</span>
+
+<span class="n">Y_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>                
+<span class="n">Ms</span> <span class="o">=</span> <span class="mi">200</span>             
+<span class="n">P</span>  <span class="o">=</span> <span class="mi">20</span>               
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Y_size</span><span class="p">)</span>
+
+<span class="c1"># Ecuación</span>
+
+<span class="k">def</span> <span class="nf">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">i_LM</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">Ms</span><span class="o">/</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">j</span> <span class="o">+</span> <span class="n">k</span><span class="o">/</span><span class="n">j</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">i_LM</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="n">i_LM</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1">#--------------------------------------------------</span>
+    <span class="c1"># NUEVA curva LM</span>
+
+<span class="c1"># Definir SOLO el parámetro cambiado</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">0.9</span>
+
+<span class="c1"># Generar la ecuación con el nuevo parámetro</span>
+<span class="k">def</span> <span class="nf">i_LM_k</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
+    <span class="n">i_LM</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">Ms</span><span class="o">/</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">j</span> <span class="o">+</span> <span class="n">k</span><span class="o">/</span><span class="n">j</span><span class="o">*</span><span class="n">Y</span>
+    <span class="k">return</span> <span class="n">i_LM</span>
+
+<span class="n">i_k</span> <span class="o">=</span> <span class="n">i_LM_k</span><span class="p">(</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Ms</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dimensiones del gráfico</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">Y_size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">]</span>   
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Curvas a graficar</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LM&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">i_k</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;LM_k&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#3D59AB&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+
+<span class="c1"># Texto agregado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;∆$k$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;↑&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+
+<span class="c1"># Título y leyenda</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Incremento en k&quot;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r3_26_0.png" src="_images/r3_26_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="r2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Modelo Ingreso-Gasto: la Curva IS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="r4.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modelo IS-LM</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alexander Du-Bois Arana<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Regression Discontinuity (RDD) &#8212; Fundamentos de Macroeconomia</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Social Media and Mental Health" href="r9.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentos de Macroeconomia</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="r1.html">
+   Modelo Ingreso-Gasto Keynesiano
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r2.html">
+   Modelo Ingreso-Gasto: la Curva IS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r3.html">
+   Mercado de dinero y curva LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r4.html">
+   Modelo IS-LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r5.html">
+   Modelo DA-OA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r6.html">
+   Closing the Gap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r7.html">
+   Randomized Control Trial (RCT)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r8.html">
+   Instrumental Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r9.html">
+   Social Media and Mental Health
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Regression Discontinuity (RDD)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/r10.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fr10.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/r10.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-de-manera-muy-breve-y-resumida-en-que-consiste-una-regresion-discontinua">
+     Explique de manera muy breve y resumida en qué consiste una regresión discontinua.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detalle-un-ejemplo-en-la-vida-real-en-donde-podria-emplear-una-regresion-discontinua">
+     Detalle un ejemplo en la vida real en donde podría emplear una regresión discontinua.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-el-diseno-sharp-desing-y-comente-un-ejemplo-en-la-vida-real-en-donde-podria-aplicarlo-sea-lo-mas-detallado-posible">
+     Explique el diseño Sharp Desing y comente un ejemplo en la vida real en donde podría aplicarlo (sea lo más detallado posible).
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicaciones">
+   Aplicaciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-15-22d-2-5x-e">
+     Y = 15 + 22D + 2.5X + E
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-12-60d-1-3x-e">
+     Y = 12 + 60D + 1.3X + E
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Regression Discontinuity (RDD)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codigo">
+   Código
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-de-manera-muy-breve-y-resumida-en-que-consiste-una-regresion-discontinua">
+     Explique de manera muy breve y resumida en qué consiste una regresión discontinua.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#detalle-un-ejemplo-en-la-vida-real-en-donde-podria-emplear-una-regresion-discontinua">
+     Detalle un ejemplo en la vida real en donde podría emplear una regresión discontinua.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explique-el-diseno-sharp-desing-y-comente-un-ejemplo-en-la-vida-real-en-donde-podria-aplicarlo-sea-lo-mas-detallado-posible">
+     Explique el diseño Sharp Desing y comente un ejemplo en la vida real en donde podría aplicarlo (sea lo más detallado posible).
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicaciones">
+   Aplicaciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-15-22d-2-5x-e">
+     Y = 15 + 22D + 2.5X + E
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#y-12-60d-1-3x-e">
+     Y = 12 + 60D + 1.3X + E
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="regression-discontinuity-rdd">
+<h1>Regression Discontinuity (RDD)<a class="headerlink" href="#regression-discontinuity-rdd" title="Permalink to this headline">#</a></h1>
+<section id="lectura">
+<h2>Lectura<a class="headerlink" href="#lectura" title="Permalink to this headline">#</a></h2>
+<p>La lectura de Bell et al. busca reponder a la pregunta acerca de qué factores determinan que una persona se convierta en un inventor en EEUU. Para responder a ello, los autores combinan dos bases de datos con 1.2 millones de usuarios: una acerca de los aplicantes a patentes entre 1996 y 2014, y otra del pago de impuestos federales. Gracias a esto, los autores realizan un seguimiento de la vida de estos inventores para compararlos e identificar qué afecta mayor a su éxito en el futuro: si su capacidad inventiva innata o el ambiente donde se criaron, es decir, sus características de nacimiento, como el nivel socioeconómico, su raza, o su género.</p>
+<p>Una fortaleza de su investigación es que toma en cuenta que estos factores de crianza no son únicos para los inventores, sino que afectan el éxito en general de los futuros profesiones.. Esto podría generar problemas, ya que podrían existir variable contrafactuales que explican específicamente las razones que llevan a uno a volverse inventor. Pero los autores toman esto en cuenta, y encuentran además que dentro de los factores de la crianza, la zona donde uno nace, y la cercanía a otros inventores o núcleos de invención desde pequeño afecta tomar esta decisión profesional. Por lo tanto, el trabajo logra demostrar que estos factores de crianza si tienen un aspecto único para los inventores, ya que incluso el área donde se innova tiene una correlación con el tipo de inventos o patentes del lugar donde se nace.</p>
+<p>Por otro lado, se puede identificar como una debilidad que no se tomen en cuenta factores intelectuales para evidenciar la propensión a volverse inventor. Es verdad que los factores estructurales juegan un papel importante, pero también sería importante conocer las capacidades de los jóvenes y su nivel intelectual para llevar a cabo estos planes futuros, así como el nivel educativo de los padres y su propio rendimiento, que también pueden tener un papel importante.</p>
+<p>Este trabajo resulta muy importante ya que analiza los factores que llevan a crear inventores. En primer lugar, el trabajo confirma que los factores de nacimiento son altamente predictivos para evidenciar si una persona se volverá inventor. Esto se incrementa si uno proviene de una familia de altos ingresos, si es de raza blanca, y además si uno es hombre. Estas desigualdades permiten evidenciar que existe un campo desventajoso para las personas opuestas a estas características, lo que podría significar también que muchas de las mentes más brillantes no tienen las capacidades para salir a la luz. En segundo lugar, el trabajo logra encontrar un efecto causal entre la exposición a la inovación en la infancia entre sus seres cercanos, con volverse un inventor en el futuro. Y esta causalidad se extiende también al tipo de innovación a la que uno se expone, que luego será por la cuál el niño o niña se interesará profesionalmente. Asimismo, este trabajo colabora con diversas literaturas. Por ejemplo, permite expandir nuestro conocimiento acerca de los factores que llevan a que los jóvenes elijan ciertas carreras universitarias. Además, el trabajo es un gran ejemplo de cómo el talento es solamente encontrado y explotado cuando existen condiciones del entorno que lo permitan, por lo que las brechas de desigualdad aumentan.</p>
+<p>Para seguir investigando acerca de estos temas, creo que un área interesante sería observar si existen propuestas de políticas públicas o proyectos del gobierno para promover las innovaciones y los inventos. Esto podría relacionarse con los factores estructurales, y se podría observar si el trabajo del Estado tiene algún efecto sobre la decisión de volverse inventor. Asimismo, existen trabajos que han analizado la desigualdad que la innovación presenta. Por ejemplo, el trabajo de Aghion er al. (2018), analiza cómo la innovación fomenta brechas de ingresos entre los más ricos, y demuestra también que la innovación está fuertemente asociada con la movilidad social. Pero otros autores, como Frey (2019), explican que debería de existir precaución frente a nuevas formas de innovación, ya que estas traerían aún mayores desigualdades y acceso a menos empleos, por causa de la inteligencia artificial y la automatización.</p>
+<p>Bibliografía:</p>
+<ul class="simple">
+<li><p>Aghion, P., Akcigit, U., Bergeaud, A., Blundell, R., &amp; Hémous, D. (2019). Innovation and top income inequality. The Review of Economic Studies, 86(1), 1-45.</p></li>
+<li><p>Bell, A., Chetty, R., Jaravel, X., Petkova, N., &amp; Van Reenen, J. (2019). Who becomes an inventor in America? The importance of exposure to innovation. The Quarterly Journal of Economics, 134(2), 647-713.</p></li>
+<li><p>Frey, C. B. (2019). The technology trap. In The Technology Trap. Princeton University Press.</p></li>
+</ul>
+</section>
+<section id="codigo">
+<h2>Código<a class="headerlink" href="#codigo" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span><span class="o">,</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">causalgraphicalmodels</span> <span class="kn">import</span> <span class="n">CausalGraphicalModel</span>
+<span class="kn">from</span> <span class="nn">cProfile</span> <span class="kn">import</span> <span class="n">label</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<section id="explique-de-manera-muy-breve-y-resumida-en-que-consiste-una-regresion-discontinua">
+<h3>Explique de manera muy breve y resumida en qué consiste una regresión discontinua.<a class="headerlink" href="#explique-de-manera-muy-breve-y-resumida-en-que-consiste-una-regresion-discontinua" title="Permalink to this headline">#</a></h3>
+<p>Una regresión discontinua es un método de identificación causal sin aleatorización, que consiste en comparar los resultados de dos grupos a ambos lados de un umbral, es decir, comparar a dos grupos que se dividen por una discontinuidad en el curso natural de las cosas (el umbral) que sirve como tratamiento. El supuesto fundamental es que ambos grupos deben ser muy parecidos, y este umbral debe ser quien los diferencie. Por lo tanto, se puede comparar a aquellos por encima y por debajo del umbral por medio de una “running variable”, que es la variable que se usará para definir a ambos grupos; un “cut off”, que es el valor de esta variable o la categoría que determina si eres tratamiento o control; y un “bandwidth”, que es el rango de casos a ambos lados del umbral que se usará en la muestra.</p>
+</section>
+<section id="detalle-un-ejemplo-en-la-vida-real-en-donde-podria-emplear-una-regresion-discontinua">
+<h3>Detalle un ejemplo en la vida real en donde podría emplear una regresión discontinua.<a class="headerlink" href="#detalle-un-ejemplo-en-la-vida-real-en-donde-podria-emplear-una-regresion-discontinua" title="Permalink to this headline">#</a></h3>
+<p>Por ejemplo, durante la pandemia, se podría realizar una regresión discontinua con el uso de las mascarillas y las disposiciones del gobierno. Por ejemplo, recientemente, se podría tomar como umbral el decreto supremo del gobierno sobre el uso opcional de las mascarillas en espacios cerrados. Y tomando como disrrupción a ese hecho, se podría comparar los contagios de covid antes y despúes de esa medida.</p>
+</section>
+<section id="explique-el-diseno-sharp-desing-y-comente-un-ejemplo-en-la-vida-real-en-donde-podria-aplicarlo-sea-lo-mas-detallado-posible">
+<h3>Explique el diseño Sharp Desing y comente un ejemplo en la vida real en donde podría aplicarlo (sea lo más detallado posible).<a class="headerlink" href="#explique-el-diseno-sharp-desing-y-comente-un-ejemplo-en-la-vida-real-en-donde-podria-aplicarlo-sea-lo-mas-detallado-posible" title="Permalink to this headline">#</a></h3>
+<p>El “Sharp Design” para una regresión discontinua consiste en que la probabilidad de pertencer al grupo de tratamiento pasa de 0% al 100% (de 0 a 1) cuando uno cruza el umbral. Por ejemplo, se podría utilizar una regresión discontinua para medir el impacto de un programa de becas que solo se aplica a un grupo de personas. Este grupo de personas obtiene la beca debido a que obtuvo una calificación específica en un examen, por ejemplo, 700 de 1000 puntos como mínimo. Por lo tanto, obtener 700 puntos podría ser nuestro umbral para observar quienes obtuvieron la beca o no.</p>
+</section>
+</section>
+<section id="aplicaciones">
+<h2>Aplicaciones<a class="headerlink" href="#aplicaciones" title="Permalink to this headline">#</a></h2>
+<section id="y-15-22d-2-5x-e">
+<h3>Y = 15 + 22D + 2.5X + E<a class="headerlink" href="#y-15-22d-2-5x-e" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Random data</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)})</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Cutoff</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># Simulated Y</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">+</span> <span class="mi">22</span><span class="o">*</span><span class="n">dat</span><span class="o">.</span><span class="n">D</span> <span class="o">+</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">dat</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">dat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># Not Treatment</span>
+<span class="n">dat_0</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="c1"># Treatment</span>
+<span class="n">dat_1</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Colors </span>
+<span class="n">treat_c</span> <span class="o">=</span> <span class="s2">&quot;#568A9B&quot;</span> <span class="c1"># Treatment</span>
+<span class="n">n_treat</span> <span class="o">=</span> <span class="s2">&quot;#A10728&quot;</span> <span class="c1"># Not treatment</span>
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.7</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Not treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.7</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r10_9_0.png" src="_images/r10_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">y_hat_lin</span><span class="p">(</span><span class="n">da_ta</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">):</span>
+    <span class="n">yhat</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> ~ </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">da_ta</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+    <span class="n">da_ta</span><span class="p">[</span><span class="s2">&quot;yhat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">yhat</span>
+    <span class="n">da_ta</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;yhat&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">da_ta</span>
+
+<span class="n">data_y0</span> <span class="o">=</span> <span class="n">y_hat_lin</span><span class="p">(</span><span class="n">dat_0</span><span class="p">)</span>
+<span class="n">data_y1</span> <span class="o">=</span> <span class="n">y_hat_lin</span><span class="p">(</span><span class="n">dat_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Not treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r10_11_0.png" src="_images/r10_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eff</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data_y1</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="n">data_y0</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span>
+<span class="n">eff</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">eff</span><span class="p">,</span>  <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Effect:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">eff</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Effect: 21.48
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.03</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Not treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.03</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">eff</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">xy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="n">eff</span> <span class="o">+</span> <span class="mi">76</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">data_y0</span><span class="o">.</span><span class="n">yhat</span><span class="p">)),</span> <span class="n">xytext</span> <span class="o">=</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">data_y1</span><span class="o">.</span><span class="n">yhat</span><span class="p">)),</span> 
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;&lt;-&gt;&quot;</span><span class="p">,</span>
+                            <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r10_13_0.png" src="_images/r10_13_0.png" />
+</div>
+</div>
+</section>
+<section id="y-12-60d-1-3x-e">
+<h3>Y = 12 + 60D + 1.3X + E<a class="headerlink" href="#y-12-60d-1-3x-e" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Random data</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)})</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dat</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Cutoff</span>
+<span class="n">dat</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># Simulated Y</span>
+<span class="n">dat</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">+</span> <span class="mi">60</span><span class="o">*</span><span class="n">dat</span><span class="o">.</span><span class="n">D</span> <span class="o">+</span> <span class="mf">1.3</span> <span class="o">*</span> <span class="n">dat</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">dat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># Not Treatment</span>
+<span class="n">dat_0</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="c1"># Treatment</span>
+<span class="n">dat_1</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Colors </span>
+<span class="n">treat_c</span> <span class="o">=</span> <span class="s2">&quot;#568A9B&quot;</span> <span class="c1"># Treatment</span>
+<span class="n">n_treat</span> <span class="o">=</span> <span class="s2">&quot;#A10728&quot;</span> <span class="c1"># Not treatment</span>
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.7</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Not treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.7</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r10_16_0.png" src="_images/r10_16_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">y_hat_lin</span><span class="p">(</span><span class="n">da_ta</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">):</span>
+    <span class="n">yhat</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> ~ </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">da_ta</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+    <span class="n">da_ta</span><span class="p">[</span><span class="s2">&quot;yhat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">yhat</span>
+    <span class="n">da_ta</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;yhat&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">da_ta</span>
+
+<span class="n">data_y0</span> <span class="o">=</span> <span class="n">y_hat_lin</span><span class="p">(</span><span class="n">dat_0</span><span class="p">)</span>
+<span class="n">data_y1</span> <span class="o">=</span> <span class="n">y_hat_lin</span><span class="p">(</span><span class="n">dat_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Not treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.2</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r10_18_0.png" src="_images/r10_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eff</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data_y1</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span> <span class="o">-</span> <span class="nb">max</span><span class="p">(</span><span class="n">data_y0</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span>
+<span class="n">eff</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">eff</span><span class="p">,</span>  <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Effect:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">eff</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Effect: 55.86
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.03</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Not treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat_1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span> <span class="mf">.03</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Treatment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">n_treat</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;yhat&quot;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data_y1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">treat_c</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$c_0$: Cutoff&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">eff</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">xy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="n">eff</span> <span class="o">+</span> <span class="mi">76</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span> <span class="o">=</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">data_y0</span><span class="o">.</span><span class="n">yhat</span><span class="p">)),</span> <span class="n">xytext</span> <span class="o">=</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">data_y1</span><span class="o">.</span><span class="n">yhat</span><span class="p">)),</span> 
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;&lt;-&gt;&quot;</span><span class="p">,</span>
+                            <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/r10_20_0.png" src="_images/r10_20_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="r9.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Social Media and Mental Health</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alexander Du-Bois Arana<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

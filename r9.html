@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Social Media and Mental Health &#8212; Fundamentos de Macroeconomia</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Regression Discontinuity (RDD)" href="r10.html" />
+    <link rel="prev" title="Instrumental Variables" href="r8.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fundamentos de Macroeconomia</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="r1.html">
+   Modelo Ingreso-Gasto Keynesiano
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r2.html">
+   Modelo Ingreso-Gasto: la Curva IS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r3.html">
+   Mercado de dinero y curva LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r4.html">
+   Modelo IS-LM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r5.html">
+   Modelo DA-OA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r6.html">
+   Closing the Gap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r7.html">
+   Randomized Control Trial (RCT)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r8.html">
+   Instrumental Variables
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Social Media and Mental Health
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="r10.html">
+   Regression Discontinuity (RDD)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/r9.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fr9.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/r9.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Social Media and Mental Health</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectura">
+   Lectura
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="social-media-and-mental-health">
+<h1>Social Media and Mental Health<a class="headerlink" href="#social-media-and-mental-health" title="Permalink to this headline">#</a></h1>
+<section id="lectura">
+<h2>Lectura<a class="headerlink" href="#lectura" title="Permalink to this headline">#</a></h2>
+<p>La lectura de Braghieri et al. busca responder a la pregunta de ¿cuál es el impacto que tienen las redes sociales en la salud mental? En este caso, los investigadores realizan un quasi experimento por medio de un diseño de investigación de experimento natural, que fue la introducción de Facebook en las universidades de EEUU. Por medio de este estímulo, los investigadores utilizan la encuesta de Evaluación de Salud en Universidades Nacionales (NCHA), y comparan el nivel de salud mental de aquellos alumnos a tiempo completo de pregrado entre 2000 y 2008 según dos grupos: aquellos que tomaron la encuesta antes de la llegada de Facebook a su universidad; y aquellos que la tomaron luego de que Facebook se haya introducido. El estudio permite entonces entender cuál fue el impacto de la introdución de esta red social en los alumnos universitarios, y comprobar si existe un efecto causal entre estas dos situaciones.</p>
+<p>Este experimento tiene diferentes fortalezas. En primer lugar, un punto fuerte es el diseño de “generalized difference-in-differences”. Esto significa que se toman en cuenta dos dimensiones de variación para encontrar el efecto causal del estímulo en casos muy parecidos. Estas dos dimensiones son la universidad a la que atienden los alumnos, y la segunda dimensión es si se tomó la encuesta antes o después de la introducción de Facebook a su universidad. Este diseño permite controlar algunos factores, como la exigencia variada de las universidades, las diferencias económicas de los alumnos o el momento distinto de la introducción de Facebook. Asimismo, otro punto a favor de la investigación es el hecho que toma como explicación alternativa el tiempo de exposición a Facebook, creando una ecuación que le permite comparar la cantidad de semestres que el alumno ha estado expuesto a Facebook. Esto permite evidenciar que efectivamente, aquellos alumnos que tuvieron más semestres de exposición a Facebook tienen una percepción más negativa de su salud mental. En general, estar expuesto po 5 semestres genera un incremento del 32% de que el alumno sea diagnosticado con depresión. Por lo tanto, el trabajo no solo advierte de los problemas que el surgimiento de esta red social tuvo, sino que advierte acerca de la magnitud de su impacto a largo plazo.</p>
+<p>Por otro lado, una desventaja del experimento es que y se analiza la diferencia entre aquellos que tomaron la encuesta antes y después de la introducción de Facebook. Esto permite observar las diferencias en salud mental entre estos dos grupos, pero no se lleva a cabo un seguimiento individual, y el cambio en la salud mental de los alumnos luego de la instroducción de Facebook. Sería interesante poder realizar dos encuestas, una antes y otra después de la exposición a la red social, para no solo evidenciar si existe un impacto, sino en qué medida se da este impacto, y en relación a que factores y cómo puede este variar entre diferentes alumnos. Asimismo, el experimento no puede controlar que aquellos alumnos que están en sus semestres finales presenten mayores niveles de estrés, lo que podría confundirse con un efecto causal del uso de Facebook. Mientras los años pasan, no solo Facebook se usa más frecuentemente, sino que esos mismos alumnos tienen mayores responsabilidades, y el efecto de ambos hechos podría confundirse. El uso de una variable instrumental permitiría que estos posibles sesgos o puntos ciegos se tomen en cuenta y se analicen los resultados finales en base únicamente al efecto de las redes sociales, y no de factores secundarios paralelos. Además, otro punto débil es el uso de la propia encueste NCHA. Esta encuesta no es un examen de salud mental especializado, sino un formulario de salud a nivel general, que se realiza de manera independiente por cada alumno, es decir, es un reporte propio de cada alumno, y no un diagnóstico médico. Por lo tanto, lo que sienta un alumno puede ser mucho más grave o leve de lo que él o ella haya colocado en su encuesta, ya que esta no fue hecha con un especialista que permita diagnosticar todo el caso.</p>
+<p>El avance que esta investigación logra realizar es considerable. Principalmente, este trabajo permite comprobar la hipótesis de que las redes sociales han tenido un impacto negativo en la salud mental y que han aumentado las enfermedades mentales entre adolescentes y adultos jóvenes desde su aparición. Luego de crear el índice de mala salud mental, los resultados del experimento demostraron que luego de la introducción de Facebook, este índice aumentó en 0.085 unidades de desviación estándar. Esto permitió evidenciar también que los casos de depresión en las universidades encuestadas aumentaron en 24% luego de la introducción de la red social. Asimismo, estos efectos aumentan a medida que aumenta el uso y la exposición a esta red social, y como consecuencia, el rendimiento académico de los alumnos también se ve afectado. Todo esto se deba a que Facebook genera que los alumnos se involucren en comparaciones sociales, donde se minimizan frente a sus colegas, y como consecuencia, enfatizan sus diferencias con ellos, y cambian sus percepciones acerca de ellos mismos, comúnmente por algunas más negativas. El trabajo permite así generar una evidencia causal comprensiva acerca de los efectos de las redes sociales en la salud mental, y reflexiona también acerca de las consecuencias de las redes sociales en las esferas académicas, sociales, políticas y económicas.</p>
+<p>Para seguir explorando esta área de investigación, se podrían realizar estudios acerca de los efectos de otras redes sociales en alumnos universitarios, por ejemplo Twitter o Instagram, que a diferencia de Facebook, tienen otros enfoques. Por ejemplo, el trabajo de de Mello (2022), analiza los efectos de Twitter en las decisiones de la opinión pública, y demuestra que el uso de Twitter para discutir acerca de política, periodismo, etc, genera peores niveles de salud mental y mayor polarización. Asimismo, creo que sería interesante evaluar los efectos de las redes sociales en alumnos de colegio, y analizar también, por medio de experimentos a largo plazo, como esta exposición los afecta luego en la universidad. Otros trabajos ya se están realizando con enfoques muy interesantes. Por ejemplo, Golin (2022) analiza el efecto de la exposición a internet en la salud mental de los adultos, y encuentra que esta exposición lleva a la decadencia de la salud mental de las mujeres, sobre todo entre los 17 y 30 años, pero no de los hombres. Por lo tanto, la brecha de género se expande también a los efectos negativos del acceso a internet.</p>
+<p>Bibliografía:</p>
+<ul class="simple">
+<li><p>Braghieri, L., Levy, R. E., &amp; Makarin, A. (2022). Social media and mental health. American Economic Review, 112(11), 3660-93.</p></li>
+<li><p>de Mello, V. O., Cheung, F., &amp; Inzlicht, M. (2022). Twitter use in the everyday life: Exploring how Twitter use predicts well-being, polarization, and sense of belonging.</p></li>
+<li><p>Golin, M. (2022). The effect of broadband internet on the gender gap in mental health: Evidence from germany. Health Economics, 31, 6-21.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="r8.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Instrumental Variables</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="r10.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Regression Discontinuity (RDD)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alexander Du-Bois Arana<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
